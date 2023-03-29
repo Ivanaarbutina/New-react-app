@@ -1,0 +1,84 @@
+.header {
+  background-color: $header-background;
+
+  &__logo {
+    width: 5rem;
+  }
+
+  &__nav {
+    margin-right: 2rem;
+    display: flex;
+    &__item {
+      text-decoration: none;
+      color: $black;
+      font-size: 1.40rem;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover{
+        color:rgb(10, 93, 132) ;
+      }
+
+      &:hover {
+        &::after {
+          width: 100%;
+          
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+      
+        background-color: rgb(111, 210, 255);
+        transition: all 250ms ease-in-out;
+      }
+    }
+  }
+
+  &__actions {
+    align-items: center;
+    display: none;
+
+    @media (min-width: $media-md) {
+      display: flex;
+    }
+
+    &__name{
+      font-size: 2.30rem;
+      color:rgb(30, 85, 108) ;
+      font-family: Kristi-Regular;
+    }
+  }
+
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__hamburger {
+    width: 1.5rem;
+    display: block;
+
+    @media (min-width: $media-md) {
+      display: none;
+    }
+  }
+
+  @font-face {
+    font-family: Kristi-Regular;
+    src: url(../../assets/fonts/Kristi-Regular.ttf);
+  }
+  &__actions__name{
+    font-family: Kristi-Regular;
+  }
+}
