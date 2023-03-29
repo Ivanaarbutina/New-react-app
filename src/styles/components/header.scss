@@ -11,21 +11,20 @@
     &__item {
       text-decoration: none;
       color: $black;
-      font-size: 1.40rem;
+      font-size: 1.4rem;
       margin-right: 1rem;
 
       &:last-child {
         margin-right: 0;
       }
 
-      &:hover{
-        color:rgb(10, 93, 132) ;
+      &:hover {
+        color: rgb(10, 93, 132);
       }
 
       &:hover {
         &::after {
           width: 100%;
-          
         }
       }
 
@@ -34,7 +33,7 @@
         display: block;
         width: 0;
         height: 2px;
-      
+
         background-color: rgb(111, 210, 255);
         transition: all 250ms ease-in-out;
       }
@@ -49,10 +48,10 @@
       display: flex;
     }
 
-    &__name{
-      font-size: 2.30rem;
-      color:rgb(94, 143, 164) ;
-      font-family: Kristi-Regular;
+    &__name {
+      font-size: 2.3rem;
+      color: rgb(94, 143, 164);
+      font-family: "Caveat", cursive;
     }
   }
 
@@ -78,6 +77,4 @@
     font-family: Kristi-Regular;
     src: url(../../assets/fonts/Kristi-Regular.ttf);
   }
-
-  }
-
+}
