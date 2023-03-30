@@ -1,12 +1,8 @@
 .checkbox {
   margin-left: 20rem;
   margin-top: 3rem;
-  border: 1px solid cadetblue;
+  border: 1px solid $gray;
   width: 10rem;
-  color: rgb(59, 161, 161);
+  color: $hover-green;
   font-size: 1.5rem;
-
-  #check {
-    background-color: rgb(23, 230, 51);
-  }
 }

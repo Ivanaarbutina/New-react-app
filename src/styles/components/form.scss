@@ -4,7 +4,7 @@
 
   &__label {
     font-size: 1.15rem;
-    color: rgb(56, 56, 56);
+    color: $gray;
   }
 
   &__fname {
@@ -13,9 +13,9 @@
 
   &__submit {
     margin-top: 0.5rem;
-    background-color: rgb(52, 179, 168);
-    color: rgb(83, 83, 82);
-    border: 1px solid rgb(18, 129, 101);
+    background-color: $blue-green;
+    color: $gray;
+    border: 1px solid $hover-green;
     border-radius: 1rem;
   }
 }

@@ -1,0 +1,48 @@
+.modal {
+  margin-left: 20rem;
+  margin-top: 3rem;
+
+  &__box {
+    border: 1px solid $gray;
+    border-radius: 1rem;
+    width: 35rem;
+    height: 17rem;
+    padding: 2rem;
+    background-color: $light-gray;
+
+    &__message {
+      font-family: "Moon Dance", cursive;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    &__btn {
+      width: 6rem;
+      height: 2rem;
+      margin-right: 2rem;
+      border-radius: 1.5rem;
+      background-color: $light-green;
+
+      &:hover {
+        background-color: $hover-green;
+        color: lightgrey;
+        box-shadow: 0 1.25rem 2.25rem 0 rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+    }
+
+    &__btn2 {
+      width: 6rem;
+      height: 2rem;
+      border-radius: 1.5rem;
+      background-color: $light-pink;
+
+      &:hover {
+        background-color: $hover-pink;
+        color: lightgrey;
+        box-shadow: 0 1.25rem 2.25rem 0 rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+      }
+    }
+  }
+}

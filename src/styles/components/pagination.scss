@@ -1,33 +1,33 @@
-.pagination{
+.pagination {
   margin-left: 20rem;
   margin-top: 3rem;
   display: flex;
   align-items: center;
 
-  &__number{
-    background-color: rgb(243, 244, 244);
-  }
-  
-  img{
-    width:1.75rem;
-    
+  &__number {
+    background-color: $linen;
+    color: $black;
   }
 
-  a{
+  img {
+    width: 1.75rem;
+  }
+
+  a {
     text-decoration: none;
-    font-size: 1.20rem;
+    font-size: 1.2rem;
     width: 2.15rem;
     height: 2.15rem;
-    border: 1px solid rgb(166, 166, 166);
+    border: 1px solid $light-gray;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 0.70rem;
+    margin-right: 0.7rem;
     cursor: pointer;
 
-    &:hover{
-      background-color: rgb(162, 255, 249);
-      color: rgb(168, 167, 165);
+    &:hover {
+      background-color: $light-green;
+      color: $gray;
     }
   }
 }
