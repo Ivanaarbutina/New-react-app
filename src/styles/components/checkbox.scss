@@ -1,8 +1,11 @@
 .checkbox {
-  margin-left: 20rem;
   margin-top: 3rem;
   border: 1px solid $gray;
   width: 10rem;
   color: $hover-green;
   font-size: 1.5rem;
+
+  &__label {
+    user-select: none;
+  }
 }

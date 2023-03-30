@@ -1,5 +1,4 @@
 .modal {
-  margin-left: 20rem;
   margin-top: 3rem;
 
   &__box {
@@ -22,6 +21,7 @@
       margin-right: 2rem;
       border-radius: 1.5rem;
       background-color: $light-green;
+      transition: 0.3s;
 
       &:hover {
         background-color: $hover-green;
@@ -36,6 +36,7 @@
       height: 2rem;
       border-radius: 1.5rem;
       background-color: $light-pink;
+      transition: 0.3s;
 
       &:hover {
         background-color: $hover-pink;

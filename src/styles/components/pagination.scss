@@ -1,5 +1,4 @@
 .pagination {
-  margin-left: 20rem;
   margin-top: 3rem;
   display: flex;
   align-items: center;
@@ -9,7 +8,7 @@
     color: $black;
   }
 
-  img {
+  &__img {
     width: 1.75rem;
   }
 
@@ -24,6 +23,7 @@
     justify-content: center;
     margin-right: 0.7rem;
     cursor: pointer;
+    transition: 0.3s;
 
     &:hover {
       background-color: $light-green;

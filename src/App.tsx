@@ -12,13 +12,16 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Navigation />
-      <Button />
-      <Checkbox />
-      <Form />
-      <Pagination />
-      <Tags />
-      <Modal />
+      <div className="container">
+        <Navigation />
+        <Button />
+        <Checkbox />
+        <Form />
+        <Pagination />
+        <Tags />
+        <Modal />
+      </div>
+
       <div className="container">Hello world!</div>
     </div>
   );

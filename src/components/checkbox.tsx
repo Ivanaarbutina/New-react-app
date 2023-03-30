@@ -2,7 +2,10 @@ const Checkbox = () => {
   return (
     <div className="checkbox">
       <input type="checkbox" id="check" name="check" />
-      <label> checkbox</label>
+      <label className="checkbox__label" htmlFor="check">
+        {" "}
+        checkbox
+      </label>
     </div>
   );
 };

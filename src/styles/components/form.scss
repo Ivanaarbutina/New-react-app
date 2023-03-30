@@ -1,5 +1,4 @@
 .form__field {
-  margin-left: 20rem;
   margin-top: 3rem;
 
   &__label {
@@ -13,9 +12,16 @@
 
   &__submit {
     margin-top: 0.5rem;
-    background-color: $blue-green;
-    color: $gray;
-    border: 1px solid $hover-green;
+    background-color: $gray;
+    color: $linen;
+    border: 1px solid $light-gray;
     border-radius: 1rem;
+    padding: 0.2rem 0.9rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $hover-green;
+    }
   }
 }
