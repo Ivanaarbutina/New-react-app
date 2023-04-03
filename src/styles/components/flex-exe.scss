@@ -1,0 +1,55 @@
+.flex-exe {
+  border: 1px solid $hover-green;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 3rem;
+    color: $hover-green;
+  }
+
+  &__first {
+    display: flex;
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 1.3rem;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $hover-green;
+    margin-bottom: 2rem;
+    height: 4rem;
+    width: 30rem;
+  }
+
+  &__box2 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border: 1px solid $hover-green;
+    margin-bottom: 2rem;
+    height: 4rem;
+    width: 30rem;
+  }
+
+  &__box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $hover-green;
+    margin-bottom: 2rem;
+    height: 4rem;
+    width: 30rem;
+  }
+
+  &__icon {
+    width: 3rem;
+  }
+}
