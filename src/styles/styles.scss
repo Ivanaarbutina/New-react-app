@@ -11,7 +11,12 @@
 @import "./components/flex-2.scss";
 @import "./components/form.scss";
 @import "./components/header.scss";
+@import "./components/home-work.scss";
 @import "./components/modal.scss";
 @import "./components/tags.scss";
 @import "./components/pagination.scss";
 @import "./components/tags.scss";
+
+*{
+  font-family: 'Quicksand', sans-serif;
+}

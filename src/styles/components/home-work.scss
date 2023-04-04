@@ -1,0 +1,83 @@
+.work--container{
+  border: 1px solid $hover-green;
+  padding: 1rem;
+  margin: 1rem;
+  
+
+  .test{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8rem;
+
+   &__item{
+    color: $hover-green;
+    &--red{
+      color:red;
+    }
+   }
+   &__btn{
+    background-color: $light-gray;
+    border: none;
+    padding: 0.3rem 0.6rem;
+   }
+  }
+
+  .btn{
+    padding: 0.3rem 0.6rem;
+
+    &--base{
+      color: $black;
+    }
+    &--primary{
+      background-color:$light-pink ;
+    }
+    &--lg{
+      font-size: large;
+    }
+    &--success{
+      background-color: $hover-pink;
+    }
+  }
+  .isActive{
+      color:$linen;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header{
+      &__title{
+        color: $blue-green;
+      }
+    }
+
+    &__footer{
+      &__btn{
+        width: 6rem;
+        background-color:$hover-pink ;
+      }
+    }
+
+    &__body{
+      &__title{
+        &--lg{
+          font-size:large;
+        }
+      }
+    }
+  }
+
+  .footer{
+    text-align: center;
+    &--sm{
+      color:$gray ;
+    }
+    &__body{
+      &--xl{
+        font-size: 2rem;
+      }
+    }
+  }
+}

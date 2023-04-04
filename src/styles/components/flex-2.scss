@@ -1,25 +1,50 @@
 .flex-second {
-  border: 1px solid $black;
-  margin-bottom: 4rem;
+ text-align: center;
+ font-family: 'Quicksand', sans-serif;
 
   &__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 2rem;
+  }
 
-    &__box:nth-of-type(1) {
-      flex-grow: 1;
-    }
-    &__box:nth-of-type(2) {
-      flex-grow: 2;
-    }
+  &__name{
+    font-size: 2rem;
+    font-family: "Moon Dance", cursive;
   }
 
   &__box {
-    border: 1px solid $black;
+    border: 1px solid $hover-green;
     display: flex;
     flex-direction: column;
     width: 33%;
     flex-grow: 2;
+    margin: 1rem;
+    padding: 0.6rem;
+    align-items: center;
+    background-color: $white-smoke;
+
+    & p{
+      flex-grow: 1;
+      font-family: "Moon Dance", cursive;
+      font-size: 1.5rem;
+    }
+  }
+
+    &__btn {
+    width: 6rem;
+    height: 2rem;
+    margin-right: 2rem;
+    border-radius: 1.5rem;
+    background-color: $light-green;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $hover-green;
+      color: lightgrey;
+      box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
   }
 }

@@ -1,25 +1,28 @@
 const TransformExe = () => {
   return (
     <div className="box__wrapper">
-      <div>
+      <div className="box__container">
+      <div >
         <h4>Translate</h4>
-        <div className="box box-translate"></div>
+        <div className="box box--translate"></div>
       </div>
 
-      <div>
+      <div >
         <h4>Rotate</h4>
-        <div className="box box-rotate"></div>
+        <div className="box box--rotate"></div>
       </div>
 
-      <div>
+      <div >
         <h4>Scale</h4>
-        <div className="box box-scale"></div>
+        <div className="box box--scale"></div>
       </div>
 
-      <div>
+      <div >
         <h4>Skew</h4>
-        <div className="box box-skew"></div>
+        <div className="box box--skew"></div>
       </div>
+      </div>
+     
     </div>
   );
 };
