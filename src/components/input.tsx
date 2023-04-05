@@ -7,13 +7,13 @@ type InputProps = {
 const Input = ({ rounded, label, validation }: InputProps) => {
   return (
     <>
-      {label ? <label htmlFor={label}>{label}</label> : ""}
+      {label ? <label htmlFor={label}>{label}</label> : ""} <br></br>
       <input
         id={label}
         className={`${rounded ? "input--rounded" : ""}`}
         type="text"
       />
-      {validation ? <p>{validation}</p> : ""}
+      {validation ? <p className="input__validation">{validation}</p> : ""}
     </>
   );
 };
