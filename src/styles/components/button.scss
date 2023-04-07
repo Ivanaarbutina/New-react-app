@@ -26,6 +26,11 @@
   cursor: pointer;
   padding: 0.5rem 3rem;
   transition: 0.3s;
+  width: 10rem;
+
+  @media (min-width: 28.75rem) {
+    width: 100%;
+  }
 
   &--animate {
     &:active {

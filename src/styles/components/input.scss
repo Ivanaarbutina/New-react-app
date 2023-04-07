@@ -1,11 +1,18 @@
 .input {
   padding: 0.5rem;
   border: 1px solid $black;
-  display: block;
+  display: flex;
   margin-bottom: 1rem;
+  width: 100%;
 
   &--rounded {
     border-radius: 0.5rem;
+    display: flex;
+    width: 100%;
+
+    @media (min-width: 28.75rem) {
+      width: 15rem;
+    }
   }
   &__validation {
     color: red;

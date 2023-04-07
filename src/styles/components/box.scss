@@ -1,45 +1,51 @@
-.box{
-    width: 10rem;
-    height: 10rem;
-    background-color: $hover-green;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 250ms ease;
-    margin: 3rem 3.8rem;
+.box {
+  width: 10rem;
+  height: 10rem;
+  background-color: $hover-green;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 250ms ease;
+  margin: 3rem 3.8rem;
 
-    &__wrapper{
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 
-    &__container{
-      display: flex;
-      flex-direction:row;
-      text-align: center;
-    }
-  
-    &--translate {
-      &:hover {
-        transform: translate3d(50px, 0, 0);
-      }
-    }
-    &--rotate {
-      &:hover {
-        transform: rotate3d(0, 0, 1, 250deg);
-      }
-    }
-    &--scale {
-      &:hover {
-        transform: scale(1.5);
-      }
-      &:active{
-        transform:scale(0.7);
-      }
-    }
-    &--skew {
-      &:hover {
-        transform: skew(20deg, 20deg);
-      }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    @media (min-width: $media-lg) {
+      flex-direction: row;
+      justify-content: center;
     }
   }
+
+  &--translate {
+    &:hover {
+      transform: translate3d(50px, 0, 0);
+    }
+  }
+  &--rotate {
+    &:hover {
+      transform: rotate3d(0, 0, 1, 250deg);
+    }
+  }
+  &--scale {
+    &:hover {
+      transform: scale(1.5);
+    }
+    &:active {
+      transform: scale(0.7);
+    }
+  }
+  &--skew {
+    &:hover {
+      transform: skew(20deg, 20deg);
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import Button from "./components/button";
+import Card from "./components/card";
 import Checkbox from "./components/checkbox";
 import FlexSecond from "./components/flex-2";
 import FlexExe from "./components/flex-exe";
@@ -52,6 +53,32 @@ const App = () => {
       <div className="container">
         <h2>Home work</h2>
         <HomeWork />
+      </div>
+
+      <div className="container">
+        <h2>Card</h2>
+        <div className="card__wrapper">
+          <Card
+            title="Naslov"
+            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Laudantium cupiditate  error, autem quidem dolore tempore veritatis!"
+          />
+          <Card
+            title="Naslov-2"
+            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Laudantium cupiditate  error, autem quidem dolore tempore veritatis!"
+          />
+          <Card
+            title="Naslov-3"
+            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Laudantium cupiditate  error, autem quidem dolore tempore veritatis!"
+          />
+          <Card
+            title="Naslov-4"
+            discription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Laudantium cupiditate  error, autem quidem dolore tempore veritatis!"
+          />
+        </div>
       </div>
     </div>
   );
