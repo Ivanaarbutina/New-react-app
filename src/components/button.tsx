@@ -1,17 +1,43 @@
 import { ReactNode } from "react";
 
+type ButtonColorType ="red" | "green"
+| "yellow" |"gray";
+
 type ButtonProps = {
   animate?: boolean;
   value?: string;
   icon?: ReactNode;
-  color?: "red" | "green" | "yellow";
+  color?: ButtonColorType
 };
 
-const Button = ({ animate, value = "Click me", icon }: ButtonProps) => {
+const Button = ({ 
+  animate, 
+  value = "Click me",
+   icon,
+  color="green",
+ }: ButtonProps) => {
+  const colorSwitcher = (color:ButtonColorType)=>{
+    switch (color) {
+      case "red":
+        return "btn--red";
+      case "yellow":
+        return "btn--yellow";
+      case "green":
+        return "btn--green";
+      case "gray":
+        return "btn--gray"
+
+      default:
+        return "";
+
+    }
+  };
+ 
   return (
-    <button className={`btn ${animate ? "btn--animate" : ""}`}>
+    <button
+     className={`btn ${colorSwitcher(color)} ${animate ? "btn--animate" : ""}`}>
       {icon}
-      {value}
+      <span>{value}</span>
     </button>
   );
 };

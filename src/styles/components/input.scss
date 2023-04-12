@@ -1,16 +1,25 @@
 .input {
   padding: 0.5rem;
-  border: 1px solid $black;
+  border: 2px solid $silver;
   display: flex;
   margin-bottom: 1rem;
   width: 100%;
+  
+
+  & label{
+   color:$silver;
+  }
+
+  @media (min-width: $media-sm) {
+    width: 15rem;
+  }
 
   &--rounded {
     border-radius: 0.5rem;
     display: flex;
-    width: 100%;
+    width: 100%; 
 
-    @media (min-width: 28.75rem) {
+    @media (min-width: $media-sm) {
       width: 15rem;
     }
   }

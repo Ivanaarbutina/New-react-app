@@ -26,8 +26,7 @@ const App = () => {
       <div className="container">
         <h2>Css exercise</h2>
         <Navigation />
-        <Button value="animate" />
-        <Button />
+        <Button value="animate" animate={true}/>
         <Checkbox />
         <Form />
         <Pagination />

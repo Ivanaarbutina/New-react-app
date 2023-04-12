@@ -10,7 +10,7 @@ const Input = ({ rounded, label, validation }: InputProps) => {
       {label ? <label htmlFor={label}>{label}</label> : ""} <br></br>
       <input
         id={label}
-        className={`${rounded ? "input--rounded" : ""}`}
+        className={`input ${rounded ? "input--rounded" : ""}`}
         type="text"
       />
       {validation ? <p className="input__validation">{validation}</p> : ""}

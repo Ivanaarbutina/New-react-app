@@ -1,4 +1,5 @@
 import CardImg from "./../assets/summer.jpg";
+
 type CardProps = {
   title: string;
   discription: string;
