@@ -1,16 +1,15 @@
 .card {
   border: 1px solid $hover-green;
   border-radius: 1rem;
-  
   margin: 0.4rem;
   padding: 0.3rem;
   align-items: center;
   background-color: $light-silver;
   text-align: center;
-   
 
   &__wrapper {
     display: grid;
+    padding-bottom: 2rem;
     grid-template-columns: repeat(1, 1fr);
 
     @media (min-width: $media-md) {
@@ -32,7 +31,7 @@
     font-family: "Moon Dance", cursive;
     color: $dark-gray;
   }
-  &__message{
+  &__message {
     font-family: "Moon Dance", cursive;
     font-size: 1.4rem;
   }

@@ -4,6 +4,7 @@ import Checkbox from "./components/checkbox";
 import FlexSecond from "./components/flex-2";
 import FlexExe from "./components/flex-exe";
 import Form from "./components/form";
+import GridCard from "./components/grid-card";
 import Header from "./components/header";
 import HomeWork from "./components/home-work";
 import Input from "./components/input";
@@ -26,7 +27,7 @@ const App = () => {
       <div className="container">
         <h2>Css exercise</h2>
         <Navigation />
-        <Button value="animate" animate={true}/>
+        <Button value="animate" animate={true} />
         <Checkbox />
         <Form />
         <Pagination />
@@ -77,6 +78,16 @@ const App = () => {
             discription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
              Laudantium cupiditate  error, autem quidem dolore tempore veritatis!"
           />
+        </div>
+      </div>
+
+      <div className="container">
+        <h2>Grid Card</h2>
+        <div className="card__wrapper">
+          <GridCard />
+          <GridCard />
+          <GridCard />
+          <GridCard />
         </div>
       </div>
     </div>
