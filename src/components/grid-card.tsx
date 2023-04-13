@@ -1,4 +1,5 @@
 import LionImg from "./../assets/premier-league-lion.png";
+import Toggle from "./toggle";
 
 const GridCard = () => {
   return (
@@ -39,10 +40,9 @@ const GridCard = () => {
         </div>
         <div className="card__footer__section">
           <span className="card__footer__first">Reminder</span>
-          <label className="switch">
-            <input type="checkbox" checked />
-            <span className="slider round"></span>
-          </label>
+          <div className="card__toggle">
+            <Toggle/>
+          </div>
         </div>
       </div>
     </div>
