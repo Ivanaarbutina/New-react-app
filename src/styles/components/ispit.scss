@@ -1,0 +1,44 @@
+@keyframes move-down {
+  0% {
+    transform: translate3d(0, -40rem, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.test {
+  margin: 10rem 3rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__container {
+    width: 17rem;
+    height: 17rem;
+    display: flex;
+    color: $white;
+    align-items: center;
+    justify-content: center;
+    animation: move-down 2s forwards;
+    transform: translate3d(0, -40rem, 0);
+
+    &--black {
+      background-color: $black;
+      animation-delay: 1s;
+    }
+    &--red {
+      background-color: $red;
+      animation-delay: 2s;
+    }
+    &--orange {
+      background-color: $orange;
+      animation-delay: 3s;
+    }
+  }
+  &__item {
+    color: $white;
+    font-size: 6rem;
+    font-weight: bold;
+  }
+}
