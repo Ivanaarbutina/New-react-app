@@ -15,6 +15,14 @@ import Mlinar10 from "./../assets/mlinar-10.png";
 import Mlinar11 from "./../assets/mlinar-11.png";
 import Mlinar12 from "./../assets/mlinar-12.png";
 import Mlinar13 from "./../assets/mlinar-13.png";
+import Bitmap from "./../assets/Bitmap.png";
+import Kosher from "./../assets/kosher.png";
+import KoserDairy from "./../assets/kosher_dairy.png";
+import Superbrands from "./../assets/superbrands_2012.png";
+import Superbrands2 from "./../assets/superbrands_2016-2017.png";
+import Halal from "./../assets/halal.png";
+import Bitmap2 from "./../assets/Bitmap (1).png";
+import Ifs from "./../assets/ifs.png";
 
 const Mlinar = () => {
   return (
@@ -41,21 +49,21 @@ const Mlinar = () => {
           <span className="ml-hero__title ml-hero__title--yellow">Najukusniji</span> pekarski<br></br> proizvodi u susjedstvu.
         </h1>
         <nav className="ml-hero__nav">
-          <a href="">Kruh</a>
-          <a href="">Peciva</a>
-          <a href="">Slano</a>
-          <a href="">Slatko</a>
-          <a href="">Burek</a>
-          <a href="">Pizza</a>
-          <a href="">Sendviči</a>
-          <a href="">Salata</a>
-          <a href="">HoReCa</a>
-          <a href="">Pakirano</a>
-          <a href="">Kolači</a>
+          <button className="ml-hero__nav__btn"><a href="">Kruh</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Peciva</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Slano</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Slatko</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Burek</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Pizza</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Sendviči</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Salata</a></button>
+          <button className="ml-hero__nav__btn"><a href="">HoreCa</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Pakirano</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Kolači</a></button> 
        </nav>
        <nav className="ml-hero__nav ml-hero__nav2" >
-          <a href="">Torte</a>
-          <a href="">Prigodne torte</a>
+          <button className="ml-hero__nav__btn"><a href="">Torte</a></button>
+          <button className="ml-hero__nav__btn"><a href="">Prigodne torte</a></button>
        </nav> 
       </div>
 
@@ -170,30 +178,27 @@ const Mlinar = () => {
             <img className="mlinar__info__pic"src={GoPlay}/>
             <img className="mlinar__info__pic2" src={AppStore}/>
           </div>
-          <span>&copy; MLINAR pekarska industrija d.o.o.| Made by: Reroot </span>
+          <span className="mlinar__info__copy">&copy; MLINAR pekarska industrija d.o.o.| Made by: Reroot </span>
         </div>
       </div>
 
       <div className="mlinar__footer">
         <div className="mlinar__footer__first">
-          <img/>
-          <img/>
-          <img/>
-          <img/>
-          <img/>
-          <img/>
-          <img/>
-          <img/>
+          <img src={Bitmap}/>
+          <img src={Kosher}/>
+          <img src={KoserDairy}/>
+          <img src={Superbrands}/>
+          <img src={Halal}/>
+          <img src={Superbrands2}/>
+          <img src={Bitmap2}/>
+          <img src={Ifs}/>
         </div>
-        <div className="mlinar__foter__last">
+        <div className="mlinar__footer__last">
           <a href="">Sitemap</a>
           <a href="">Dokumenti</a>
           <a href="">Pravila privatnosti</a>
         </div>
       </div>
-      
-
-
     </div>
   );
 };

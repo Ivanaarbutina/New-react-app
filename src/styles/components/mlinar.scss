@@ -48,7 +48,10 @@
     margin-top: 3rem;
 
     & h4{
-      font-family:'Montserrat' ;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: normal;
+      margin-bottom: 8px;
     }
 
     & span{
@@ -111,7 +114,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 21px;
-      }; 
+      }
     }
 
     &__box1{
@@ -125,13 +128,14 @@
       & a{
         color:$white;
         text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
         margin-left: 24px;
       }
      }
 
      &__app{
       display: flex;
-      
       margin-top: 25.53px;
       margin-left: 173px;
       margin-bottom: 25.53px;
@@ -145,19 +149,50 @@
         width: 80.42px;
         height: 23.5px;
         margin: 6px 0 7px;
+     }
+
+     &__copy{
+        font-size: 14px;
+        font-weight: 500;
+        opacity: 0.6;
+     }
+  }
+
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__first{
+      margin-top: 48px;
+      margin-bottom: 57px;
+    
+      & img{
+        margin-right: 24px;
       }
+    }
+
+    &__last{
+      & a {
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        color: $white;
+        margin-left: 24px;
+      }
+    }
   }
 }
 
 .ml-hero{
     &__title{
-    font-style: normal;
-    font-weight:700;
-    font-size:56px;
-    line-height: 84px;
-    color: $white;
-    margin-top: 113px;
-    margin-bottom: 88px;
+      font-style: normal;
+      font-weight:700;
+      font-size:56px;
+      line-height: 84px;
+      color: $white;
+      margin-top: 113px;
+      margin-bottom: 88px;
 
     &--yellow{
       color: $mlyellow;
@@ -165,16 +200,21 @@
   }
 
   &__nav{
+
+    &__btn{
+      background-color: rgb(35, 35, 35);
+      height: 36px;
+      border:none;
+      border-radius: 18px;
+      margin-right: 12px;
+      margin-bottom: 16px;
+      padding: 6px 16px;
+    }
     & a{
       font-style: normal;
-      background-color:#FFFFFF15;
-      border-radius: 18px;
       text-decoration: none;
       color: $white;
-      padding: 6px 16px;
-      margin-right: 12px;
       margin-top: 419px;
-      margin-bottom: 16px;
       line-height: 24px;
       font-size: 1rem; 
     }
