@@ -1,19 +1,24 @@
 .container__mlinar{
-  background-color: $black;
-  font-family: 'Montserrat';
+  background-color: $mlblack;
   margin: 0 auto;
-  padding: 30px 160px;
+  padding: 0 160px;
   color: $white;
   width: 1440px;
+  position: relative;
+
+  * {
+    font-family:'Montserrat' ;
+  }
+
 }
 
 .mlinar{
-
+  
   &__header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 26px;
+    padding-top: 26px;
 
     &__first{
       display: flex;
@@ -24,7 +29,6 @@
   &__nav{
     margin-left: 48px;
     & a {
-      font-family:'Montserrat' ;
       font-size: 1rem;
       color:$white;
       text-decoration: none;
@@ -42,26 +46,117 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+
+    & h4{
+      font-family:'Montserrat' ;
+    }
+
+    & span{
+      font-style: normal;
+      font-weight: 300;
+      mix-blend-mode: normal;
+      opacity: 0.6;
+    }
   }
+
+  &__img__item{
+    position: absolute;
+    width: 255px;
+    height: 36px;
+    left:1020px;
+    top:665px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  &__img__item2{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: $mlyellow;
+    border-radius: 50%;
+    top:717px;
+    left: 1124px;
+  }
+
+ &__img__path{
+   padding: 20.7px 16px;
+ }
+
 
   &__info{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 87px;
     padding-bottom: 87px;
     border-bottom: 1px solid #FFFFFF15;
-  }
+   
 
+    &__box{
+      display: flex;
+      
+      & h5{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+      }
+
+      & p{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+      }; 
+    }
+
+    &__box1{
+      margin-right: 47px;
+    }
+
+     &__box3{
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      & a{
+        color:$white;
+        text-decoration: none;
+        margin-left: 24px;
+      }
+     }
+
+     &__app{
+      display: flex;
+      
+      margin-top: 25.53px;
+      margin-left: 173px;
+      margin-bottom: 25.53px;
+     }
+
+     &__pic{
+      height: 36px;
+     }
+
+     &__pic2{
+        width: 80.42px;
+        height: 23.5px;
+        margin: 6px 0 7px;
+      }
+  }
 }
 
 .ml-hero{
     &__title{
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight:700;
     font-size:56px;
     line-height: 84px;
     color: $white;
-    margin-top: 163px;
+    margin-top: 113px;
     margin-bottom: 88px;
 
     &--yellow{
@@ -71,6 +166,7 @@
 
   &__nav{
     & a{
+      font-style: normal;
       background-color:#FFFFFF15;
       border-radius: 18px;
       text-decoration: none;
@@ -79,6 +175,8 @@
       margin-right: 12px;
       margin-top: 419px;
       margin-bottom: 16px;
+      line-height: 24px;
+      font-size: 1rem; 
     }
   }
 

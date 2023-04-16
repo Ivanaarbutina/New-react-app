@@ -1,7 +1,10 @@
 import HartMlinar from "./../assets/mlinar-hart.svg";
+import Path from "./../assets/Path.png";
+import GoPlay from "./../assets/google-play-badge.png";
+import AppStore from "./../assets/app-store-icon.jpg";
 import Mlinar1 from "./../assets/mlinar-1.jpg";
 import Mlinar2 from "./../assets/mlinar-2.jpg";
-import Mlinar3 from "./../assets/mlinar-3.jpg";
+import Mlinar3 from "./../assets/mlinar-3.png";
 import Mlinar4 from "./../assets/mlinar-4.png";
 import Mlinar5 from "./../assets/mlinar-5.png";
 import Mlinar6 from "./../assets/mlinar-6.png";
@@ -19,22 +22,24 @@ const Mlinar = () => {
       <div className="mlinar">
         <div className="mlinar__header">
           <div className="mlinar__header__first">
-          <span >
-            <img src={HartMlinar}/>
-          </span>
-          <nav className="mlinar__nav">
-            <a href="">Proizvodi</a>
-            <a href="">Lokacije</a>
-            <a href="">Karijere</a>
-            <a href="">Naša priča</a>
-            <a href="">Kontakt</a>
-          </nav>
+              <span >
+                <img src={HartMlinar}/>
+              </span>
+              <nav className="mlinar__nav">
+                <a href="">Proizvodi</a>
+                <a href="">Lokacije</a>
+                <a href="">Karijere</a>
+                <a href="">Naša priča</a>
+                <a href="">Kontakt</a>
+              </nav>
           </div>
-         
           <span>EN</span>
         </div>
+
         <div className="ml-hero"></div>
-        <h1 className="ml-hero__title"><span className="ml-hero__title ml-hero__title--yellow">Najukusniji</span> pekarski<br></br> proizvodi u susjedstvu.</h1>
+        <h1 className="ml-hero__title">
+          <span className="ml-hero__title ml-hero__title--yellow">Najukusniji</span> pekarski<br></br> proizvodi u susjedstvu.
+        </h1>
         <nav className="ml-hero__nav">
           <a href="">Kruh</a>
           <a href="">Peciva</a>
@@ -57,19 +62,23 @@ const Mlinar = () => {
       <div className="mlinar__main-section">
         <div className="mlinar__section">
           <div>
-            <img className="mlinar__img" src={Mlinar1} />
-            <h4>KRUH</h4>
-            <span>Kruhovi ravno iz peći</span>
+              <img className="mlinar__img" src={Mlinar1} />
+              <h4>KRUH</h4>
+              <span>Kruhovi ravno iz peći</span>
           </div>
           <div>
-            <img className="mlinar__img" src={Mlinar2} />
-            <h4>PECIVA</h4>
-            <span>Tradicionalna,ukusna i jednostavna</span>
+              <img className="mlinar__img" src={Mlinar2} />
+              <h4>PECIVA</h4>
+              <span>Tradicionalna,ukusna i jednostavna</span>
           </div>
           <div>
-            <img className="mlinar__img" src={Mlinar3} />
-            <h4>SLANO</h4>
-            <span>Neodoljivi slani zalogaji</span>
+              <img className="mlinar__img" src={Mlinar3} />
+              <span className="mlinar__img__item">Slano</span>
+              <span className="mlinar__img__item2">
+                <img className="mlinar__img__path" src={Path}/>
+              </span>
+              <h4>SLANO</h4>
+              <span>Neodoljivi slani zalogaji</span>
           </div>
         </div>
 
@@ -134,19 +143,53 @@ const Mlinar = () => {
       </div>
 
       <div className="mlinar__info">
-        <div>
-          <h5>MLINAR</h5>
-          <p>MLINAR pekarska industrija</p>
-          <p>Radnička cesta 228c</p>
-          <p>10000 Zagreb,Hrvatska</p>
+        <div className="mlinar__info__box">
+            <div className="mlinar__info__box1">
+              <h5>MLINAR</h5>
+              <p>MLINAR pekarska industrija</p>
+              <p>Radnička cesta 228c</p>
+              <p>10000 Zagreb,Hrvatska</p>
+            </div>
+            <div>
+              <h5>KONTAKT</h5>
+              <p>T:+385 1 23 82 300</p>
+              <p>F:+385 1 23 82 303</p>
+              <p>Email:info@mlinar.eu.com</p>
+            </div>
         </div>
-        <div>
-          <h5>KONTAKT</h5>
-          <p>T:+385 1 23 82 300</p>
-          <p>F:+385 1 23 82 303</p>
-          <p>Email:info@mlinar.eu.com</p>
+      
+        <div className="mlinar__info__box3">
+          <div>
+            <a href="">Proizvodi</a>
+            <a href="">Lokacije</a>
+            <a href="">Karijere</a>
+            <a href="">Naša priča</a>
+            <a href="">Kontakt</a>
+          </div>
+          <div className="mlinar__info__app">
+            <img className="mlinar__info__pic"src={GoPlay}/>
+            <img className="mlinar__info__pic2" src={AppStore}/>
+          </div>
+          <span>&copy; MLINAR pekarska industrija d.o.o.| Made by: Reroot </span>
         </div>
-        <div></div>
+      </div>
+
+      <div className="mlinar__footer">
+        <div className="mlinar__footer__first">
+          <img/>
+          <img/>
+          <img/>
+          <img/>
+          <img/>
+          <img/>
+          <img/>
+          <img/>
+        </div>
+        <div className="mlinar__foter__last">
+          <a href="">Sitemap</a>
+          <a href="">Dokumenti</a>
+          <a href="">Pravila privatnosti</a>
+        </div>
       </div>
       
 
