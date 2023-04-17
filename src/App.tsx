@@ -4,8 +4,8 @@ import Exe from "./pages/exe";
 import Home from "./pages/home";
 import Ispit from "./pages/ispit";
 import Mlinar from "./pages/mlinar";
-
 import "./styles/styles.scss";
+import Teorem from "./pages/teorem";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -25,6 +25,11 @@ const App = () => {
       path: "/mlinar",
       element: <Mlinar />,
     },
+    {
+      path: "/teorem",
+      element: <Teorem />,
+    },
+
   ]);
 
   return (
