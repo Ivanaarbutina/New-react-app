@@ -1,0 +1,49 @@
+.fave {
+  background-color: $favebg;
+  width: 1584px;
+  height: 900px;
+  margin: 0 auto;
+
+  * {
+    font-size: "Lato";
+  }
+  &__nav {
+    width: 256px;
+    height: 900px;
+    background-color: $favebg;
+    color: $white;
+    padding-right: 32px;
+    padding-left: 27px;
+
+    &__profile-image {
+      margin-left: 24px;
+      margin-top: 76.25px;
+      margin-right: 190.75px;
+    }
+
+    & span {
+      font-size: 21px;
+      line-height: 21px;
+      font-style: normal;
+      font-weight: 400;
+      margin-left: 8px;
+    }
+  }
+
+  &__header {
+    width: 1288px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__sec {
+      color: $white;
+      margin-top: 16px;
+    }
+    &__sec2 {
+      color: $white;
+      margin-top: 16px;
+    }
+  }
+}
