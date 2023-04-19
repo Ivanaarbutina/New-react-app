@@ -1,9 +1,8 @@
 .teorem{
-  position: relative;
   width:1440px;
   margin:0 auto;
   margin-top: 40px;
-
+ 
   *{
     font-family:'Lato' ;
     font-style: normal;
@@ -37,8 +36,6 @@
       text-decoration-line:underline ;
     }
 
-    
-
     &__box{
       display: flex;
       align-items: center;
@@ -54,21 +51,24 @@
       margin-right: 16px;
       margin-left: 134px;
       padding: 0;
-      
-
-      & span{
-        color: #7F5FD3;
+      color: #7F5FD3;
         font-size: 18px;
         font-weight: 400;
         line-height: 27px;
+
+      &:hover{
+        background-color: #7F5FD3;
+        color: $white;
+        border:2px solid  #7F5FD3;
+        color:$white;
+        transition: 0.5s ease;
       }
     }
 
     &__purple{
       width: 137px;
       height: 43px;
-      background-color: #7F5FD3;
-      color: $white;
+      color: #7F5FD3;
       border:2px solid  #7F5FD3;
       font-size: 18px;
       font-weight: 400;
@@ -77,6 +77,13 @@
       box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
       margin-right: 94px;
       padding: 0;
+      transition: 0.5s ease;
+      &:hover{
+        background-color: #7F5FD3;
+        color: $white;
+        border:2px solid  #7F5FD3;
+        color:$white;
+      }
     }
 
     &__vector{
@@ -91,16 +98,34 @@
   }
 
   &__section{
-
     &__circle{
+      position: absolute;
+      margin-top: 190px;
+      margin-left: 331px;
+      margin-right: 1041px;
+      border: 1px dashed rgb(126, 108, 242);
+      border-radius: 50%;
+      width: 68px;
+      height: 68px;
+      z-index: 1;
+    }
+
+    &__circle2{
+      position: absolute;
+      margin-top: -102px;
+      margin-left: 963px;
       border: 1px dashed rgb(126, 108, 242);
       border-radius: 50%;
       width: 68px;
       height: 68px;
     }
+
     & h1{
-     margin-top: 182px;
-     margin-left: 352px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 352px;
+      margin-top: -20px;
       width: 724px;
       height: 200px;
       font-size: 80px;
@@ -109,24 +134,128 @@
       line-height: 100px;
       text-align: center;
       letter-spacing: 0.13125px;
+      padding: 0;
     }
-
-    & p{
-      
+    
+    &__description{
+      display: flex;
+      justify-content: center;
+      height: 72px;
+      width: 349px;
+      margin-top: -43px;
+      margin-left: 542px;
       font-size: 24px;
       line-height: 36px;
       opacity: 0.5;
-      text-align: center;
-      
+      text-align: center; 
     }
 
     &__img{
+      position: relative;
       width: 89px;
       height: 89px;
-      position: absolute;
-      top:157px;
-      left:349px;
+      margin-left: 349px;
+      margin-top: 157px;
+      z-index: 2;
+    }
+
+    &__img2{
+      display: flex;
+      position: relative;
+      width: 90px;
+      height: 90px;
+      margin-top: -88px;
+      margin-right: 387px;
+      margin-left: 963px;
+      padding: 0;
+      z-index: 1;
+    }
+
+    &__planer{
+      width: 1110px;
+      height: 634px;
+      margin:150px 165px;
     }
   }
 
+}
+
+.tutoring{
+  & h2{
+    margin-top: 31px;
+    top: 1450px;
+    left: 319px;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  & h3{
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  &__desc{  
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    opacity: 0.5;
+    text-align: center;
+ }
+  
+  & p{
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      opacity: 0.5;
+      text-align: center;
+      letter-spacing: 0.13125px;
+  }
+
+  & img {
+    margin: 26px;
+    margin-left: 115px;
+    margin-right: 145px;
+   
+  }
+
+
+
+   
+
+ 
+
+  &__card-wrapper{
+    display: grid;
+    padding-bottom: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 120px;
+    margin-left: 165px;
+    margin-right: 165px;
+  }
+  
+  &__card{
+    width: 350px;
+    height: 380px;
+    border-radius: 24px;
+    box-shadow: 15px 10px rgba(0, 0, 0,0.05) ;
+
+   
+
+    &--1,
+    &--2,
+    &--4,
+    &--5{
+      margin-right: 30px;
+    }
+
+    &--4,
+    &--5,
+    &--6{
+      margin-top: 85px;
+    }
+    
+ }
 }
