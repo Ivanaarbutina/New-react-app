@@ -21,19 +21,22 @@
       margin-right: 269.19px;
     }
 
-    &__link{
+    &__link,
+     &__link1{
       font-size: 16px;
       font-weight: 400;
       line-height: 22px;
-      color: #00000080;
-      margin-right: 40px;
+      color:  #00000080 ;
+      &:hover{
+        color: $black;
+        font-weight: 500;
+        font-size: 16px;
+        font-style: normal;
+        text-decoration-line:underline ;
+      }
     }
-
-    &__link1{
-      font-weight: 500;
-      font-size: 16px;
-      font-style: normal;
-      text-decoration-line:underline ;
+    &__link{
+      margin-right: 40px;
     }
 
     &__box{
@@ -55,13 +58,14 @@
         font-size: 18px;
         font-weight: 400;
         line-height: 27px;
+        transition: 0.5s ease;
 
       &:hover{
         background-color: #7F5FD3;
         color: $white;
         border:2px solid  #7F5FD3;
         color:$white;
-        transition: 0.5s ease;
+        box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
       }
     }
 
@@ -74,15 +78,16 @@
       font-weight: 400;
       line-height: 27px;
       border-radius: 10px;
-      box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
+      background-color: $white;
       margin-right: 94px;
       padding: 0;
       transition: 0.5s ease;
       &:hover{
-        background-color: #7F5FD3;
+        background-color:#7F5FD3;
         color: $white;
         border:2px solid  #7F5FD3;
         color:$white;
+        box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
       }
     }
 
@@ -221,12 +226,6 @@
    
   }
 
-
-
-   
-
- 
-
   &__card-wrapper{
     display: grid;
     padding-bottom: 2rem;
@@ -240,7 +239,12 @@
     width: 350px;
     height: 380px;
     border-radius: 24px;
-    box-shadow: 15px 10px rgba(0, 0, 0,0.05) ;
+    box-shadow: 7px 7px 15px #ccc;
+
+    &:hover{
+      box-shadow: 8px 8px 25px #b2b1b1;
+    }
+    
 
    
 
@@ -248,7 +252,7 @@
     &--2,
     &--4,
     &--5{
-      margin-right: 30px;
+      margin-right: 9px;
     }
 
     &--4,
