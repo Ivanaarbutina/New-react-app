@@ -183,6 +183,20 @@
     }
   }
 
+  &__tutor{
+    width: 1110px;
+    height: 324px;
+    border-radius: 24px;
+    background-color: #7F5FD3;
+    margin: 120px 165px;
+    display: flex;
+    justify-content: space-between;
+
+    &__info{
+      color: white;
+    }
+  }
+
 }
 
 .tutoring{

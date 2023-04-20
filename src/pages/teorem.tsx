@@ -9,6 +9,7 @@ import MoneyDyn from "./../assets/money-dynamic.png";
 import ChartDin from "./../assets/chart-dynamic.png";
 import ChatBubble from "./../assets/chat-bubble.png";
 import Dollar from "./../assets/dollar.png";
+import John from "./../assets/john.png";
 
 const Teorem = () => {
   return (
@@ -83,6 +84,11 @@ const Teorem = () => {
             <h3>Improve Your Teaching</h3>
             <p>We take care of administration, you just focus the lessons.</p>
           </div>
+        </div>
+
+        <div className="teorem__tutor">
+          <p className="teorem__tutor__info">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque ex accusantium fuga similique, quisquam quod placeat? Nihil facere maiores voluptatibus aspernatur impedit inventore omnis eos, beatae ipsa minus repellendus voluptates."</p>
+          <img src={John}/>
         </div>
       
         </div>
