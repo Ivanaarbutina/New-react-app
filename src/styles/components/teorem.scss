@@ -1,20 +1,19 @@
-.teorem{
-  width:1440px;
-  margin:0 auto;
+.teorem {
+  width: 1440px;
+  margin: 0 auto;
   margin-top: 40px;
- 
-  *{
-    font-family:'Lato' ;
+
+  * {
+    font-family: "Lato";
     font-style: normal;
   }
- 
 
-  &__header{
+  &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &__icon{
+    &__icon {
       width: 105px;
       height: 19px;
       margin-left: 173px;
@@ -22,58 +21,57 @@
     }
 
     &__link,
-     &__link1{
+    &__link1 {
       font-size: 16px;
       font-weight: 400;
       line-height: 22px;
-      color:  #00000080 ;
-      &:hover{
+      color: #00000080;
+      &:hover {
         color: $black;
         font-weight: 500;
         font-size: 16px;
         font-style: normal;
-        text-decoration-line:underline ;
+        text-decoration-line: underline;
       }
     }
-    &__link{
+    &__link {
       margin-right: 40px;
     }
 
-    &__box{
+    &__box {
       display: flex;
       align-items: center;
-      
     }
 
-    &__transparent{
+    &__transparent {
       width: 102px;
       height: 43px;
       border-radius: 10px;
-      border: 2px solid #7F5FD3;
+      border: 2px solid #7f5fd3;
       background-color: $white;
       margin-right: 16px;
       margin-left: 134px;
       padding: 0;
-      color: #7F5FD3;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 27px;
-        transition: 0.5s ease;
+      color: #7f5fd3;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      transition: 0.5s ease;
 
-      &:hover{
-        background-color: #7F5FD3;
+      &:hover {
+        background-color: #7f5fd3;
         color: $white;
-        border:2px solid  #7F5FD3;
-        color:$white;
+        border: 2px solid #7f5fd3;
+        color: $white;
         box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
       }
     }
 
-    &__purple{
+    &__purple {
       width: 137px;
       height: 43px;
-      color: #7F5FD3;
-      border:2px solid  #7F5FD3;
+      color: #7f5fd3;
+      border: 2px solid #7f5fd3;
       font-size: 18px;
       font-weight: 400;
       line-height: 27px;
@@ -82,28 +80,28 @@
       margin-right: 94px;
       padding: 0;
       transition: 0.5s ease;
-      &:hover{
-        background-color:#7F5FD3;
+      &:hover {
+        background-color: #7f5fd3;
         color: $white;
-        border:2px solid  #7F5FD3;
-        color:$white;
+        border: 2px solid #7f5fd3;
+        color: $white;
         box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.05);
       }
     }
 
-    &__vector{
+    &__vector {
       margin-right: 5px;
-      color:$silver;
+      color: $silver;
     }
 
-    &__lang{
-      color:#00000080;
+    &__lang {
+      color: #00000080;
       margin-right: 24px;
     }
   }
 
-  &__section{
-    &__circle{
+  &__section {
+    &__circle {
       position: absolute;
       margin-top: 190px;
       margin-left: 331px;
@@ -115,7 +113,7 @@
       z-index: 1;
     }
 
-    &__circle2{
+    &__circle2 {
       position: absolute;
       margin-top: -102px;
       margin-left: 963px;
@@ -125,7 +123,7 @@
       height: 68px;
     }
 
-    & h1{
+    & h1 {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -141,8 +139,8 @@
       letter-spacing: 0.13125px;
       padding: 0;
     }
-    
-    &__description{
+
+    &__description {
       display: flex;
       justify-content: center;
       height: 72px;
@@ -152,10 +150,10 @@
       font-size: 24px;
       line-height: 36px;
       opacity: 0.5;
-      text-align: center; 
+      text-align: center;
     }
 
-    &__img{
+    &__img {
       position: relative;
       width: 89px;
       height: 89px;
@@ -164,7 +162,7 @@
       z-index: 2;
     }
 
-    &__img2{
+    &__img2 {
       display: flex;
       position: relative;
       width: 90px;
@@ -176,31 +174,35 @@
       z-index: 1;
     }
 
-    &__planer{
+    &__planer {
       width: 1110px;
       height: 634px;
-      margin:150px 165px;
+      margin: 150px 165px;
     }
   }
 
-  &__tutor{
+  &__tutor {
     width: 1110px;
     height: 324px;
     border-radius: 24px;
-    background-color: #7F5FD3;
+    background-color: #7f5fd3;
     margin: 120px 165px;
     display: flex;
     justify-content: space-between;
 
-    &__info{
+    &__info {
       color: white;
     }
-  }
 
+    &__pic {
+      width: 160px;
+      height: 160px;
+    }
+  }
 }
 
-.tutoring{
-  & h2{
+.tutoring {
+  & h2 {
     margin-top: 31px;
     top: 1450px;
     left: 319px;
@@ -210,37 +212,36 @@
     text-align: center;
   }
 
-  & h3{
+  & h3 {
     font-size: 24px;
     line-height: 36px;
     text-align: center;
   }
 
-  &__desc{  
+  &__desc {
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
     opacity: 0.5;
     text-align: center;
- }
-  
-  & p{
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 27px;
-      opacity: 0.5;
-      text-align: center;
-      letter-spacing: 0.13125px;
+  }
+
+  & p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    opacity: 0.5;
+    text-align: center;
+    letter-spacing: 0.13125px;
   }
 
   & img {
     margin: 26px;
     margin-left: 115px;
     margin-right: 145px;
-   
   }
 
-  &__card-wrapper{
+  &__card-wrapper {
     display: grid;
     padding-bottom: 2rem;
     grid-template-columns: repeat(3, 1fr);
@@ -248,32 +249,28 @@
     margin-left: 165px;
     margin-right: 165px;
   }
-  
-  &__card{
+
+  &__card {
     width: 350px;
     height: 380px;
     border-radius: 24px;
     box-shadow: 7px 7px 15px #ccc;
 
-    &:hover{
+    &:hover {
       box-shadow: 8px 8px 25px #b2b1b1;
     }
-    
-
-   
 
     &--1,
     &--2,
     &--4,
-    &--5{
+    &--5 {
       margin-right: 9px;
     }
 
     &--4,
     &--5,
-    &--6{
+    &--6 {
       margin-top: 85px;
     }
-    
- }
+  }
 }
