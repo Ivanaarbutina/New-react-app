@@ -48,7 +48,8 @@ const Varijable = () => {
   };
 
   return (
-    <div>
+    <div className="varijable">
+      <h2>Varijable</h2>
       <div>
         <h4>Vrijednost pi varijable je: {pi + 5}</h4>
         <h4>Vrijednost color varijable je :{color + "red"}</h4>
@@ -70,23 +71,15 @@ const Varijable = () => {
       <div>Godine:{obj.age}</div>
       <div>Visina:{obj.height}</div>
 
-      <div>
+      <div className="varijable__table">
         <tr>
           <th>Fruit</th>
-          <th>name</th>
           <th>calorie</th>
           <th>color</th>
         </tr>
         <tr>
-          <td>name</td>
           <td>{name}</td>
-        </tr>
-        <tr>
-          <td>Calorie</td>
           <td>{calorie}</td>
-        </tr>
-        <tr>
-          <td>Color</td>
           <td>{colorFruit}</td>
         </tr>
       </div>

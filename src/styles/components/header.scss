@@ -1,5 +1,5 @@
 .header {
-  background-color: $header-background;
+   background-image: linear-gradient(to right, $light-green ,$header-background);
 
   &__logo {
     width: 5rem;

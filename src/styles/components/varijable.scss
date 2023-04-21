@@ -1,0 +1,23 @@
+.varijable{
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding:  2rem;
+  border:2px solid $hover-green;
+
+  & h2{
+    font-size: 2.5rem;
+    color: $hover-green;
+    text-align: center;
+  }
+
+  &__table{
+    & tr, th, td{
+      border: 1px solid $black;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
+    & th{
+      background-color: $light-green;
+    }
+  }
+}
