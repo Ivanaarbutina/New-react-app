@@ -8,6 +8,7 @@ import "./styles/styles.scss";
 import Teorem from "./pages/teorem";
 import Fave from "./pages/fave";
 import Varijable from "./pages/varijable";
+import Petlje from "./pages/petlje";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const App = () => {
     {
       path: "/varijable",
       element: <Varijable />,
+    },
+    {
+      path: "/petlje",
+      element: <Petlje />,
     },
   ]);
 
