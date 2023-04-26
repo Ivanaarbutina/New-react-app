@@ -24,10 +24,14 @@ const Petlje = () => {
     }
     //3. izračunaj opseg kruga gdje je zadani broj polumjer (pi*r*2)
     let opseg = pi * r * 2;
-    console.log(opseg);
+    {
+      console.log(opseg);
+    }
 
     let numbers = [1, 2, 3, 4, 5];
-    console.log(numbers);
+    {
+      console.log(numbers);
+    }
   };
   return (
     <div className="container">
