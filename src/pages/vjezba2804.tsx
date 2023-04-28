@@ -137,9 +137,7 @@ const Vjezba2804 = () => {
   console.log(frontRazred[nameWithM].name);
 
   //Pronadji sve osobe koje su vislje od 160 a nize od 180
- let a = 160;
- let b = 180;
- frontRazred.sort(())
+ 
 
   return (
     <div>
