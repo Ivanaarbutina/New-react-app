@@ -1,7 +1,8 @@
 const Home = () => {
-  return <div className="container">
-    <h2>Home</h2>
-    <div>
+  return (
+    <div className="container">
+      <h2>Home</h2>
+      <div>
         <h3>Vježbe</h3>
         <ul>
           <li>
@@ -10,8 +11,12 @@ const Home = () => {
           <li>
             <a href="/vjezba2604">Vjezba 2604</a>
           </li>
+          <li>
+            <a href="/vjezba2804">Vjezba 2804</a>
+          </li>
         </ul>
       </div>
-  </div>;
+    </div>
+  );
 };
 export default Home;
