@@ -9,7 +9,10 @@ type StudentType = {
   favoriteColor: string;
 };
 
+
+
 const Vjezba2804 = () => {
+  
   const frontRazred: StudentType[] = [
     {
       name: "Ivan",
@@ -19,7 +22,7 @@ const Vjezba2804 = () => {
       height: 183,
       hobby: "Cycling",
       employed: true,
-      favoriteColor: "red",
+      favoriteColor : "red",
     },
     {
       name: "Goran",
@@ -131,13 +134,52 @@ const Vjezba2804 = () => {
       employed: false,
       favoriteColor: "red",
     },
-  ];
+  ]; 
   //Pronadji sve osobe kojima ime pocinje na slovo "M"
   let nameWithM = frontRazred.findIndex((item) => item.name[0] === "M");
   console.log(frontRazred[nameWithM].name);
-
+  
   //Pronadji sve osobe koje su vislje od 160 a nize od 180
+  let findHeight = frontRazred[1].height;
+  for (let i = 0; i < frontRazred.length; i++){
+    if  (findHeight = 6){
+      continue;
+   }else if(findHeight > 6){
+    console.log (frontRazred[findHeight].name);
+   }
+    else if(findHeight = 8){
+      break;
+   }
+   return findHeight;
+  }
+  console.log (frontRazred[findHeight].name);
+  
+
+  
  
+//Pronadji sve osobe kojima je omiljena boja crvena
+let favCol;
+favCol = frontRazred[7];
+
+let frontRed = frontRazred.findIndex((item) => item.favoriteColor === "red");
+if( favCol = "red"){
+  console.log(frontRazred[frontRed].name);
+};
+
+//Pronadji sve osobe kojima prezime zavrsava na "c" ili "ć"
+
+
+
+
+// let baka: string;
+// function bringBaka() {
+ //  for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i] == "baka") {
+  //     baka = arr[i];
+    //   return baka;
+     //}
+   //}
+ //}
 
   return (
     <div>
@@ -175,21 +217,31 @@ const Vjezba2804 = () => {
           })}
         </ul>
 
-        <table>
+        <table className="varijable__table">
           <thead>
-            <tr>
-              <td>Age</td>
-              <td>Gender</td>
-              <td>Height</td>
+            <tr >
+              <th>Name</th>
+              <th>LastName</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Height</th>
+              <th>Hobby</th>
+              <th>Employed</th>
+              <th>Favorite Color</th>
             </tr>
           </thead>
           <tbody>
             {frontRazred.map((student) => {
               return (
                 <tr>
+                  <td>{student.name}</td>
+                  <td>{student.lastName}</td>
                   <td>{student.age}</td>
                   <td>{student.gender}</td>
                   <td>{student.height}</td>
+                  <td>{student.hobby}</td>
+                  <td>{student.employed}</td>
+                  <td>{student.favoriteColor }</td>
                 </tr>
               );
             })}
