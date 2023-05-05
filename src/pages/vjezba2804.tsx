@@ -1,3 +1,5 @@
+type GenderType = "male" | "female";
+
 type StudentType = {
   name: string;
   lastName: string;
@@ -9,10 +11,7 @@ type StudentType = {
   favoriteColor: string;
 };
 
-
-
 const Vjezba2804 = () => {
-  
   const frontRazred: StudentType[] = [
     {
       name: "Ivan",
@@ -140,46 +139,25 @@ const Vjezba2804 = () => {
   console.log(frontRazred[nameWithM].name);
   
   //Pronadji sve osobe koje su vislje od 160 a nize od 180
-  let findHeight = frontRazred[1].height;
-  for (let i = 0; i < frontRazred.length; i++){
-    if  (findHeight = 6){
-      continue;
-   }else if(findHeight > 6){
-    console.log (frontRazred[findHeight].name);
-   }
-    else if(findHeight = 8){
-      break;
-   }
-   return findHeight;
-  }
-  console.log (frontRazred[findHeight].name);
   
+  const filteredStudents = frontRazred.filter((student) => student.height > 160 && student.height < 180);
+  console.log(filteredStudents);
 
   
  
 //Pronadji sve osobe kojima je omiljena boja crvena
-let favCol;
-favCol = frontRazred[7];
+const redFavoriteColorStudents = frontRazred.filter(student => student.favoriteColor === "red");
 
-let frontRed = frontRazred.findIndex((item) => item.favoriteColor === "red");
-if( favCol = "red"){
-  console.log(frontRazred[frontRed].name);
-};
+  console.log(redFavoriteColorStudents);
 
 //Pronadji sve osobe kojima prezime zavrsava na "c" ili "ć"
 
+const filteredLastName = frontRazred.filter((student) => /c$|ć$/i.test(student.lastName));
+console.log(filteredLastName);
 
 
 
-// let baka: string;
-// function bringBaka() {
- //  for (let i = 0; i < arr.length; i++) {
-  //   if (arr[i] == "baka") {
-  //     baka = arr[i];
-    //   return baka;
-     //}
-   //}
- //}
+
 
   return (
     <div>
@@ -205,17 +183,7 @@ if( favCol = "red"){
             })}
           </tbody>
         </table>
-        <ul>
-          {frontRazred.map((student) => {
-            return (
-              <li>
-                {student.age}
-                {student.gender}
-                {student.height}
-              </li>
-            );
-          })}
-        </ul>
+    
 
         <table className="varijable__table">
           <thead>

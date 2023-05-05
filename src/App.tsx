@@ -12,6 +12,8 @@ import Petlje from "./pages/petlje";
 import Vjezba2604 from "./pages/vjezba2604";
 import Vjezba2804 from "./pages/vjezba2804";
 import Zadaca from "./pages/zadaca";
+import Vjezba0305 from "./pages/vjezba0305";
+import Vjezba0505 from "./pages/vjezba0505";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -53,11 +55,19 @@ const App = () => {
     },
     {
       path: "/vjezba2804",
-      element: <Vjezba2804 />,
+      element: <Vjezba2804/>,
     },
     {
       path: "/zadaca",
-      element: <Zadaca />,
+      element: <Zadaca/>,
+    },
+    {
+      path: "/vjezba0305",
+      element: <Vjezba0305 />,
+    },
+    {
+      path: "/vjezba0505",
+      element: <Vjezba0505 />,
     },
   ]);
 

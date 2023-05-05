@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const Zadaca =() =>{
 
  //1.Zadatak
@@ -37,12 +39,16 @@ function addTwoNum(num1: number, num2: number){
   };
 console.log(addTwoNum(350, 16));
 
+
+
   return(
     <div className="container">
       <h2>Zadaca</h2>
       <p>Zovem se {myName}, i imam {myAge} godine.</p>
     <div>{addTwoNum(30, 54)}</div>
+   
     </div>
   );
-}
+  };
+
 export default Zadaca;
