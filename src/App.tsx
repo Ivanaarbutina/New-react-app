@@ -15,6 +15,7 @@ import Zadaca from "./pages/zadaca";
 import Vjezba0305 from "./pages/vjezba0305";
 import Vjezba0505 from "./pages/vjezba0505";
 import Breweries from "./pages/breweries";
+import Pokemons from "./pages/pokemons";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -56,11 +57,11 @@ const App = () => {
     },
     {
       path: "/vjezba2804",
-      element: <Vjezba2804/>,
+      element: <Vjezba2804 />,
     },
     {
       path: "/zadaca",
-      element: <Zadaca/>,
+      element: <Zadaca />,
     },
     {
       path: "/vjezba0305",
@@ -72,7 +73,11 @@ const App = () => {
     },
     {
       path: "/breweries",
-      element: <Breweries/>,
+      element: <Breweries />,
+    },
+    {
+      path: "/pokemons",
+      element: <Pokemons />,
     },
   ]);
 
