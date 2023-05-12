@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import People from "./../assets/people.svg";
+import LeftRide from "./../assets/left-side.svg";
+import RightRide from "./../assets/right-side.svg";
 
 type EuropeType = {
   name: CountryType;
@@ -6,8 +9,19 @@ type EuropeType = {
   capital: string[];
   currencies: CurrencyType;
   population: number;
-  borders:string[];
- 
+  borders: string[];
+  maps: MapsType;
+  car: CarType;
+};
+
+type CarType = {
+  signs: string[];
+  side: string;
+};
+
+type MapsType = {
+  googleMaps: string;
+  openStreetMaps: string;
 };
 
 type CurrencyType = {
@@ -62,11 +76,12 @@ const Europe = () => {
           </thead>
           <tbody>
             {data.map((country) => {
+              console.log(country.borders);
               return (
                 <tr>
                   <td>{country.name.common}</td>
                   <td>
-                    <img src={country.flags.png} />
+                    <img className="varijable__img2" src={country.flags.png} />
                   </td>
                   <td>
                     {Object.keys(country.currencies).map((currency) => {
@@ -79,11 +94,63 @@ const Europe = () => {
                     })}
                   </td>
                   <td>{country.population}</td>
-                  {/* <td>
-                    {country.borders.map((borders) => {
-                      return borders ;
+                  <td>
+                    {country.borders
+                      ? country.borders.map((borders) => {
+                          return borders + " ";
+                        })
+                      : "nema granica"}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <table className="varijable__table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Map</th>
+              <th>Population</th>
+              <th>Borders</th>
+              <th>Cars</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((country) => {
+              return (
+                <tr>
+                  <td>{country.name.common}</td>
+                  <td>
+                    <a href={country.maps.googleMaps} target="_blank">
+                      Map
+                    </a>
+                  </td>
+                  <td className="varijable__td">
+                    <img className="varijable__img" src={People} alt="" />
+                    {country.population.toLocaleString("en-US")}
+                  </td>
+                  <td>
+                    {country.borders
+                      ? country.borders.map((borders) => {
+                          return borders + " ";
+                        })
+                      : "nema granica"}
+                  </td>
+                  <td>
+                    {country.car.signs.map((sign) => {
+                      return sign + " ";
                     })}
-                  </td> */}
+                    <span>
+                      {country.car.side === "left" ? (
+                        <img src={LeftRide} />
+                      ) : (
+                        <img src={RightRide} />
+                      )}
+                    </span>
+                  </td>
                 </tr>
               );
             })}

@@ -1,27 +1,38 @@
-.varijable{
+.varijable {
   max-width: 1200px;
   margin: 2rem auto;
-  padding:  2rem;
-  border:2px solid $hover-green;
+  padding: 2rem;
+  border: 2px solid $hover-green;
 
-  & h2{
+  &__img {
+    width: 2rem;
+  }
+
+  &__img2 {
+    width: 4rem;
+  }
+
+  &__td {
+    display: flex;
+    align-items: center;
+  }
+
+  & h2 {
     font-size: 2.5rem;
     color: $hover-green;
     text-align: center;
   }
 
-  &__table{
-    & tr, th, td{
+  &__table {
+    & tr,
+    th,
+    td {
       border: 1px solid $black;
-      font-size: 1.5rem;
-      padding: 0.5rem;
+      font-size: 1.3rem;
+      padding: 0.2rem;
     }
-    & th{
+    & th {
       background-color: $light-silver;
-    }
-
-    & img {
-      width:6rem;
     }
   }
 }
