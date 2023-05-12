@@ -1,27 +1,29 @@
 import { useEffect, useState } from "react";
 
+type PokemonTypeTypeType = {
+  name:string;
+  url:string;
+};
+
+type PokemonTypesType = {
+  slot:number;
+  type:PokemonTypeTypeType[];
+};
+
 type PokemonType = {
-  name: string;
-  color: string;
-  abilities: PokemonAbilitiesType[];
-  url: string;
-  id: string;
+  id:number;
+  name:string;
+  types:PokemonTypesType;
 };
 
-type PokemonColorType = {
-  id: number;
-  name: string;
+type PokemonAbilityNames = {
+  name:string;
 };
 
-type PokemonAbilitiesType = {
-  is_hidden: true;
-  slot: number;
-  ability: PokemonAbilityType;
-};
-
-type PokemonAbilityType = {
+type PokemonAbility = {
   name: string;
   url: string;
+  names:PokemonAbilityNames[];
 };
 
 type BerrieType = {
@@ -30,37 +32,35 @@ type BerrieType = {
 };
 
 const Pokemons = () => {
-  const [data, setData] = useState<PokemonType>();
-  const [dataByColor, setDataByColor] = useState<PokemonColorType>();
-  const [colorValue, setColorValue] = useState<string>("");
-  const [searchValue, setSearchValue] = useState<string>("");
-  const [nameValue, setNameValue] = useState<string>("");
+  const [pokemonData, setPokemonData] = useState<PokemonType>();
+  const [pokemonAbility, setPokemonAbility] = useState<PokemonAbility>();
+  const [searchValue, setsearchValue] = useState<string>("");
   const [berries, setBerries] = useState<BerrieType[]>([]);
-  const [capitalCity, setCapitalCity] = useState<[]>([]);
   const [flag, setFlag] = useState<string>("");
 
-  const getPokemons = (name: string) => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+  const searchPokemons = (pokemonName: string) => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLocaleLowerCase()}`)
       .then((response) => {
         return response.json();
       })
-      .then((jsonData) => {
-        console.log(jsonData);
-        setData(jsonData);
+      .then((data) => {
+        console.log(data);
+        setPokemonData(data);
+        getPokemonAbility(data.id);
       })
       .catch((error) => console.error(error));
   };
 
   //====================================================
 
-  const getPokemonsByColor = (id: string) => {
-    fetch(`https://pokeapi.co/api/v2/pokemon-color/${id}`)
+  const getPokemonAbility = (id: number) => {
+    fetch(`https://pokeapi.co/api/v2/ability/${id}`)
       .then((response) => {
         return response.json();
       })
-      .then((jsonData) => {
-        console.log(jsonData);
-        setDataByColor(jsonData);
+      .then((data) => {
+        console.log(data);
+        setPokemonAbility(data);
       })
       .catch((error) => console.error(error));
   };
@@ -82,46 +82,36 @@ const Pokemons = () => {
   //===============================================
 
   const getCapitalCity = () => {
-    fetch(`https://restcountries.com/v3.1/capital/tallinn`)
+    fetch(`https://restcountries.com/v3.1/capital/zagreb`)
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-        console.log(data[0]);
+        console.log(data[0].flags.png);
+        setFlag(data[0].flags.png);
       })
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    getPokemons("bulbasaur");
-    getPokemonsByColor("3");
     getBerries();
     getCapitalCity();
   }, []);
 
   return (
     <div className="container">
-      <h2>Pokemons</h2>
-      <div>
-        {data ? (
-          <div>
-            <div>{data.name}</div>
-          </div>
-        ) : (
-          <div>Nema Pokemona</div>
-        )}
-      </div>
-      <hr></hr>
       <h2>Pokemons By Color</h2>
       <div>
-        {dataByColor ? <div>{dataByColor.name}</div> : <div>Nema Pokemona</div>}
         <input
           type="text"
-          onChange={(e) => setSearchValue(e.target.value)}
-          value={searchValue}
-          placeholder=""
+          onChange={(e) => setsearchValue(e.target.value)}
         />
-        <button onClick={() => getPokemonsByColor(searchValue)}>Search</button>
+        <button onClick={() => searchPokemons(searchValue)}>Search</button>
+      </div>
+      <div>
+        {pokemonAbility && pokemonAbility.names.map((name) => {
+          return <div>{name.name}</div>;
+        })}
       </div>
       <div>
         <h2>Berries</h2>
@@ -130,12 +120,14 @@ const Pokemons = () => {
             return (
               <div>
                 <div> {berry.name}</div>
-                <a href=""></a>
+                <a href={berry.url}>Link</a>
               </div>
             );
           })}
         </div>
       </div>
+      <h2>Flag</h2>
+      <img src={flag} alt="flag"/>
     </div>
   );
 };

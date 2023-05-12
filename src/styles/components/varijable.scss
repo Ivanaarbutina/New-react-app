@@ -17,7 +17,11 @@
       padding: 0.5rem;
     }
     & th{
-      background-color: $light-green;
+      background-color: $light-silver;
+    }
+
+    & img {
+      width:6rem;
     }
   }
 }

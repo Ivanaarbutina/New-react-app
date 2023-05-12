@@ -32,6 +32,9 @@ const Home = () => {
           <li>
             <a href="/europe">Europe</a>
           </li>
+          <li>
+            <a href="/asia">Asia</a>
+          </li>
         </ul>
       </div>
     </div>

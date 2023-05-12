@@ -6,6 +6,8 @@ type EuropeType = {
   capital: string[];
   currencies: CurrencyType;
   population: number;
+  borders:string[];
+ 
 };
 
 type CurrencyType = {
@@ -55,6 +57,7 @@ const Europe = () => {
               <th>Currency</th>
               <th>Capital City</th>
               <th>Population</th>
+              <th>Borders</th>
             </tr>
           </thead>
           <tbody>
@@ -76,6 +79,11 @@ const Europe = () => {
                     })}
                   </td>
                   <td>{country.population}</td>
+                  {/* <td>
+                    {country.borders.map((borders) => {
+                      return borders ;
+                    })}
+                  </td> */}
                 </tr>
               );
             })}
