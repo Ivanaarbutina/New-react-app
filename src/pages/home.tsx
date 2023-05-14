@@ -2,7 +2,7 @@ const Home = () => {
   return (
     <div className="container">
       <h2>Home</h2>
-      <div>
+      <div className="home">
         <h3>Vježbe</h3>
         <ul>
           <li>
@@ -34,6 +34,9 @@ const Home = () => {
           </li>
           <li>
             <a href="/asia">Asia</a>
+          </li>
+          <li>
+            <a href="/chat">Chat</a>
           </li>
         </ul>
       </div>

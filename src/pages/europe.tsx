@@ -60,18 +60,20 @@ const Europe = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h2>Europe</h2>
       <div>
-        <table className="varijable__table">
+        <table className="table">
           <thead>
             <tr>
               <th>Name</th>
               <th>Flag</th>
               <th>Currency</th>
+              <th>Map</th>
               <th>Capital City</th>
               <th>Population</th>
               <th>Borders</th>
+              <th>Cars</th>
             </tr>
           </thead>
           <tbody>
@@ -81,55 +83,25 @@ const Europe = () => {
                 <tr>
                   <td>{country.name.common}</td>
                   <td>
-                    <img className="varijable__img2" src={country.flags.png} />
+                    <img className="table__img2" src={country.flags.png} />
                   </td>
                   <td>
                     {Object.keys(country.currencies).map((currency) => {
                       return currency;
                     })}
                   </td>
-                  <td>
+                  <td >
+                    <a  className="table__link" href={country.maps.googleMaps} target="_blank">
+                      Map
+                    </a>
+                  </td>
+                  <td >
                     {country.capital.map((capital) => {
                       return capital;
                     })}
                   </td>
-                  <td>{country.population}</td>
-                  <td>
-                    {country.borders
-                      ? country.borders.map((borders) => {
-                          return borders + " ";
-                        })
-                      : "nema granica"}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-      <div>
-        <table className="varijable__table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Map</th>
-              <th>Population</th>
-              <th>Borders</th>
-              <th>Cars</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((country) => {
-              return (
-                <tr>
-                  <td>{country.name.common}</td>
-                  <td>
-                    <a href={country.maps.googleMaps} target="_blank">
-                      Map
-                    </a>
-                  </td>
-                  <td className="varijable__td">
-                    <img className="varijable__img" src={People} alt="" />
+                  <td className="table__td">
+                    <img className="table__img" src={People} alt="" />
                     {country.population.toLocaleString("en-US")}
                   </td>
                   <td>
@@ -156,6 +128,9 @@ const Europe = () => {
             })}
           </tbody>
         </table>
+      </div>
+      <div>
+      
       </div>
     </div>
   );

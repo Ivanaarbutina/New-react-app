@@ -12,6 +12,7 @@ import Navigation from "../components/navigation";
 import Pagination from "../components/pagination";
 import Tags from "../components/tags";
 import TransformExe from "../components/transform-exe";
+import Table from "../components/table";
 
 const Exe = () => {
   return (
@@ -87,6 +88,7 @@ const Exe = () => {
           <GridCard />
         </div>
       </div>
+      <div className="container"><Table/></div>
     </div>
   );
 };
