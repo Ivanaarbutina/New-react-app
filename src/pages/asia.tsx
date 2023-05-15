@@ -43,9 +43,14 @@ type CountryType = {
 const Asia = () => {
 
   const [data, setData] = useState<AsiaType[]>([]);
+  const [query, setQuery] = useState("");
 
   const getAsia = ()=> {
-    fetch("https://restcountries.com/v3.1/region/asia")
+    let url = "https://restcountries.com/v3.1/region/asia";
+    if (query) {
+      url += `?name=${query}`;
+    }
+    fetch(url)
     .then((response) => {
       return response.json(); 
     })
@@ -57,11 +62,30 @@ const Asia = () => {
 
   useEffect (() => {
     getAsia();
-  },[]);
+  },[query]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    getAsia();
+  };
+
+  const filteredData = data.filter((country) => {
+    const name = country.name.common.toLowerCase();
+    return name.includes(query.toLowerCase());
+  });
 
   return(
     <div className="container">
       <h2>Asia</h2>
+
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder="Search" value={query} onChange={handleChange} />
+        <button type="submit">Search</button>
+      </form>
       <table className="table">
         <thead>
           <tr>
@@ -76,11 +100,11 @@ const Asia = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((country) =>{
+          {filteredData.map((country) =>{
             return(
               <tr>
               <td>{country.name.common}</td>
-              <td><img className="varijable__img2" src={country.flags.png}/></td>
+              <td><img className="table__img2" src={country.flags.png}/></td>
               <td>
                 {Object.keys(country.currencies).map((currencies) => {
                 return currencies;

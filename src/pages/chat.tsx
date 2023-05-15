@@ -28,8 +28,6 @@ const Chat = () => {
         src={ChatBubble}/>
         <h3>Fabulous Chat :)</h3>
         </div>
-     
-       
         <div className="message-list">
           {messages.map((message, index) => (
             <div key={index}>
