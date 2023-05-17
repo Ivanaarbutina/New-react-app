@@ -20,6 +20,7 @@ import Europe from "./pages/europe";
 import Asia from "./pages/asia";
 import Chat from "./pages/chat";
 import Vjezba1505 from "./pages/vjezba1505";
+import Vjezba1705 from "./pages/vjezba1705";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -98,6 +99,10 @@ const App = () => {
     {
       path: "/vjezba1505",
       element: <Vjezba1505 />,
+    },
+    {
+      path: "/vjezba1705",
+      element: <Vjezba1705 />,
     },
   ]);
 

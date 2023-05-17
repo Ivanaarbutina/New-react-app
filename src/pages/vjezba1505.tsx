@@ -16,12 +16,12 @@ const Vjezba1505 = () => {
   };
 
   //3. Funkcija koja treba u konzolu ispisati brojeve od 1 do 10
-  let numTen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const countToTen = () => {
-    for (let i = 0; i <= 11; i++) {
-      if (numTen > i) console.log(i);
-    }
-  };
+  // let numTen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // const countToTen = () => {
+  //   for (let i = 0; i <= 11; i++) {
+  //     if (numTen > i) console.log(i);
+  //   }
+  // };
 
   //4. Funkcija koja zbraja sve broojeve iz array-a
   const num = [5, 6, 9, 4];
@@ -53,23 +53,22 @@ const Vjezba1505 = () => {
 
   //6. Funkcija koja pretvara celsius to fahrenheit
   //formula =>  °C * 1.8 + 32 = °F
-  const celsiusToFahrenheit = (celsius: string) => {
-    return celsius * (1.8 + 32);
-  };
+  // const celsiusToFahrenheit = (celsius: string) => {
+  //   return celsius * (1.8 + 32);
+  // };
 
   //7. Funkcija koja ispisuje string naopako
-  const reverseString = (str: boolean) => {
-    let reversedStr = "";
-    for (let i = str.length - 1; i > 0; i--) {
-      reversedStr += str[i - 1];
-    }
-    return reversedStr;
-  };
+  // const reverseString = (str: boolean) => {
+  //   let reversedStr = "";
+  //   for (let i = str.length - 1; i > 0; i--) {
+  //     reversedStr += str[i - 1];
+  //   }
+  //   return reversedStr;
+  // };
 
   useEffect(() => {
     //Ovdje možemo pokretati funkciju koju testiramo
     console.log(add(1, 2));
-    console.log(concatArrays(array1, array2));
 
     console.log(sumArray);
     console.log(getFullName(user));
