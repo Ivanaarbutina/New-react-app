@@ -90,29 +90,3 @@
   }
 }
 
-.to-do-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow-y: scroll;
-  flex: 1;
-  background-color: aqua;
-}
-.to-do-info {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.1rem;
-  background-color: #c5c3c3;
-  border-radius: 1rem;
-  margin-bottom: 0.7rem;
-  width: 100%;
-  max-width: 60%;
-
-  & p {
-    font-family: "Caveat", cursive;
-    font-size: 1.5rem;
-  }
-}
-.close {
-  width: 1rem;
-}
