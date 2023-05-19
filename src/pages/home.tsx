@@ -44,6 +44,9 @@ const Home = () => {
           <li>
             <a href="/todo">To do list</a>
           </li>
+          <li>
+            <a href="/searchApp">Search App</a>
+          </li>
         </ul>
       </div>
     </div>
