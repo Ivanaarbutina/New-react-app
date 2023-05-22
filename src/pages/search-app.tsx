@@ -4,6 +4,11 @@ type SearchResult = {
   trackId: number;
   trackName: string;
   artistName: string;
+  artistViewUrl: string;
+  artworkUrl100: string;
+  country: string;
+  previewUrl: string;
+  primaryGenreName: string;
 };
 
 const SearchApp = () => {
@@ -48,14 +53,27 @@ const SearchApp = () => {
         ) : searchResults.length === 0 ? (
           <div>Nema trazenog rezultata</div>
         ) : (
-          <ul>
-            {searchResults.map((result) => (
-              <li key={result.trackId}>
-                {result.trackName} - {result.artistName}
-              </li>
-            ))}
-          </ul>
-        )}
+            searchResults.map((result, index) => (
+              <div key={index}>
+               <img className=""
+               src={result.artworkUrl100}
+               alt={`${result.artistName} - ${result.trackName}`}
+               />
+               <div>
+                <a 
+                href={result.artistViewUrl}
+                target={"_blank"}
+                >
+                  {result.artistName} - {result.trackName}
+                </a>
+                <div>{result.primaryGenreName}</div>
+               </div>
+               <audio controls>
+                <source src={result.previewUrl} type="audio/mpeg"/>
+                Your browser does not support the audio element.
+               </audio>
+              </div>
+            )))}
       </div>
     </div>
   );
