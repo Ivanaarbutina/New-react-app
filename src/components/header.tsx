@@ -11,7 +11,7 @@ const Header = () => {
         <div className="header__actions">
           <nav className="header__nav">
             <a className="header__nav__item" href="/">
-              Home
+              Hooome
             </a>
             <a className="header__nav__item" href="/exe">
               Exercises
@@ -31,7 +31,6 @@ const Header = () => {
             <a className="header__nav__item" href="/varijable">
               Varijable
             </a>
-          
           </nav>
           <div className="header__actions__name">Ivana</div>
         </div>
