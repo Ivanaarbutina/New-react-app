@@ -13,8 +13,10 @@ const Zadaca = () => {
   if (myAge < 40) {
     console.log("nemam vise od 40 godina");
   } else if (myAge > 40) {
-    console.log("imam vise od 40 godina");
+    console.log("imam vise od 40 goddddina");
   }
+
+  const test = 3;
 
   //3. Zadatak
   //Ispiši koliko znakova ima u tvom imenu (koristi varijablu s imenom)

@@ -13,7 +13,7 @@ const Card = ({ title, discription }: CardProps) => {
       <p className="card__message">{discription}</p>
       <div className="card__bottom">
         <button className="card__btn">Ok</button>
-        <button className="card__btn2">Cancel</button>
+        <button className="card__btn2">Cancell</button>
       </div>
     </div>
   );
