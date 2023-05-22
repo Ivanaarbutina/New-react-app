@@ -13,7 +13,7 @@ const Zadaca = () => {
   if (myAge < 40) {
     console.log("nemam vise od 40 godina");
   } else if (myAge > 40) {
-    console.log("imam vise od 40 goddddina");
+    console.log("imam vise od 40 gooooddddinnna");
   }
 
   const test = 3;
