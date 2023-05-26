@@ -1,0 +1,50 @@
+.art {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__wrapper {
+    max-width: 1650px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    border: 2px solid $hover-green;
+    & h2 {
+      font-size: 2.5rem;
+      color: $hover-green;
+      text-align: center;
+    }
+  }
+
+  &__name {
+    font-size: 1.6rem;
+  }
+
+  &__image {
+    width: 10rem;
+    transition: 0.3sec;
+  }
+
+  &__section {
+    border: 2px solid $silver;
+    max-width: 80rem;
+    padding: 2rem;
+    margin: 2rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    color: $hover-green;
+    font-weight: 900;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & p {
+      font-size: 1.6rem;
+      max-width: 30rem;
+    }
+  }
+}

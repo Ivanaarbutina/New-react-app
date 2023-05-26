@@ -21,7 +21,7 @@ const Vjezba2804 = () => {
       height: 183,
       hobby: "Cycling",
       employed: true,
-      favoriteColor : "red",
+      favoriteColor: "red",
     },
     {
       name: "Goran",
@@ -133,31 +133,31 @@ const Vjezba2804 = () => {
       employed: false,
       favoriteColor: "red",
     },
-  ]; 
+  ];
   //Pronadji sve osobe kojima ime pocinje na slovo "M"
   let nameWithM = frontRazred.findIndex((item) => item.name[0] === "M");
   console.log(frontRazred[nameWithM].name);
-  
+
   //Pronadji sve osobe koje su vislje od 160 a nize od 180
-  
-  const filteredStudents = frontRazred.filter((student) => student.height > 160 && student.height < 180);
+
+  const filteredStudents = frontRazred.filter(
+    (student) => student.height > 160 && student.height < 180
+  );
   console.log(filteredStudents);
 
-  
- 
-//Pronadji sve osobe kojima je omiljena boja crvena
-const redFavoriteColorStudents = frontRazred.filter(student => student.favoriteColor === "red");
+  //Pronadji sve osobe kojima je omiljena boja crvena
+  const redFavoriteColorStudents = frontRazred.filter(
+    (student) => student.favoriteColor === "red"
+  );
 
   console.log(redFavoriteColorStudents);
 
-//Pronadji sve osobe kojima prezime zavrsava na "c" ili "ć"
+  //Pronadji sve osobe kojima prezime zavrsava na "c" ili "ć"
 
-const filteredLastName = frontRazred.filter((student) => /c$|ć$/i.test(student.lastName));
-console.log(filteredLastName);
-
-
-
-
+  const filteredLastName = frontRazred.filter((student) =>
+    /c$|ć$/i.test(student.lastName)
+  );
+  console.log(filteredLastName);
 
   return (
     <div>
@@ -183,11 +183,10 @@ console.log(filteredLastName);
             })}
           </tbody>
         </table>
-    
 
         <table className="varijable__table">
           <thead>
-            <tr >
+            <tr>
               <th>Name</th>
               <th>LastName</th>
               <th>Age</th>
@@ -209,7 +208,7 @@ console.log(filteredLastName);
                   <td>{student.height}</td>
                   <td>{student.hobby}</td>
                   <td>{student.employed}</td>
-                  <td>{student.favoriteColor }</td>
+                  <td>{student.favoriteColor}</td>
                 </tr>
               );
             })}
