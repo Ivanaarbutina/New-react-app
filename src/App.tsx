@@ -22,7 +22,7 @@ import Chat from "./pages/chat";
 import Vjezba1505 from "./pages/vjezba1505";
 import Todo from "./pages/todo";
 import SearchApp from "./pages/search-app";
-import Vjezba2605 from "./pages/vjezba2605";
+import Artist from "./pages/artist";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -111,8 +111,8 @@ const App = () => {
       element: <SearchApp />,
     },
     {
-      path: "/vjezba2605",
-      element: <Vjezba2605 />,
+      path: "/artist",
+      element: <Artist />,
     },
   ]);
 

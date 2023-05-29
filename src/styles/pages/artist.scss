@@ -1,0 +1,229 @@
+@keyframes move-down {
+  0% {
+    transform: translate3d(0, -5rem, 0);
+  }
+
+  100% {
+    transform: translate3d(4, 0, 0);
+  }
+}
+
+.art {
+  margin: 1rem auto;
+  display: grid;
+  padding-bottom: 2rem;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $media-md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: $media-lg) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+ 
+  &__wrapper {
+    max-width: 95%;
+    min-height: 70rem;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    border: 2px solid $hover-green;
+    align-items: center;
+    background-image: url('https://facts.net/wp-content/uploads/2022/03/paintbrushes-and-art-730x487.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    & h2 {
+      font-size: 3.5rem;
+      color: $hover-green;
+      text-align: center;
+      font-family: "Caveat", cursive ;
+    }
+  }
+
+  &__grid{
+    display:flex ;
+    flex-direction: column;
+    border: 0.2rem solid $silver;
+    border-radius: 0.6rem;
+    height: 27rem;
+    width: 15rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.5);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    transition: transform all 250ms ease;
+    cursor: pointer;
+
+    &:hover{
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
+      transform: scale(1.15);
+      background-color: rgba(0, 0, 0, 0.4);
+      color: aliceblue;
+    }
+
+    & img{
+      height: 15rem;
+    } 
+  }
+
+  &__quotes{
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  &__quote {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 0.6rem;
+    color: white;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    animation: move-down 2s forwards;
+    font-family: "Caveat", cursive;
+    font-size: 2.3rem;
+  }
+
+  &__name {
+    font-size: 2.2rem;
+    font-family: "Caveat", cursive ;
+  }
+
+  &__image {
+    width: 10rem;
+    transition: 0.3sec;
+  }
+
+  &__section {
+    position: relative;
+    border: 0.2rem solid $silver;
+    border-radius: 0.6rem;
+    width: 60rem;
+    max-height: 47rem;
+    padding: 2rem;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    &__box {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      margin-right: 1rem;
+      width: 27rem;
+      background-image: linear-gradient(to top right, #5C3EE8 , #eebb64 100% );
+   }
+   &__title {
+    font-size: 1.8rem;
+    color: $hover-green;
+    font-weight: 900;
+  }
+  &__descript {
+    font-size: 1.6rem;
+    font-family: "Caveat", cursive;
+    max-width: 29rem;
+   }
+
+   &__gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    &::-webkit-scrollbar {
+      width: 0.8rem;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 0.6rem;
+    }
+  
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  
+    & img {
+      flex-shrink: 0;
+      width: 20rem;
+      height: 20rem;
+      scroll-snap-align: start;
+      margin-right: 1rem;
+      margin-bottom: 0.5rem;
+      transition:all 250ms ease;
+  
+      &:hover{
+        width: 30rem;
+        height: 30rem;
+        z-index: 100;
+      }
+    }
+  }
+  
+  &__close {
+    & img{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      width: 1.3rem;
+    }
+  }
+}
+
+&__link{
+  color: #0b0a0b;
+  cursor: pointer;
+  margin-bottom: 0.3rem;
+ 
+  &:hover {
+    text-decoration: underline;
+    color: aqua;
+  }  
+}
+
+}
+.biografy{
+  &__card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(to top right, #5C3EE8 , #eebb64 100% );
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    & h3 {
+      margin-top: 0;
+      color: $white;
+    }
+  }
+  &__text {
+    margin-bottom: 10px;
+    font-family: "Caveat", cursive ;
+    font-size: 1.5rem; 
+  }
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    width:1.3rem
+  }
+}

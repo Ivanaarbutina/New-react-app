@@ -48,7 +48,7 @@ const Home = () => {
             <a href="/searchApp">Search App</a>
           </li>
           <li>
-            <a href="/vjezba2605">Vjezba2605</a>
+            <a href="/artist">Artist</a>
           </li>
         </ul>
       </div>
