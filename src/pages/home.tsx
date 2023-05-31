@@ -50,6 +50,9 @@ const Home = () => {
           <li>
             <a href="/artist">Artist</a>
           </li>
+          <li>
+            <a href="/bootstrapExe">BootstrapExe</a>
+          </li>
         </ul>
       </div>
     </div>

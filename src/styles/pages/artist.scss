@@ -196,7 +196,13 @@
     color: aqua;
   }  
 }
-
+&__exe{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+}
 }
 .biografy{
   &__card {

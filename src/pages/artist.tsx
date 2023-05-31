@@ -66,7 +66,7 @@ const Artist = () => {
     setIsBiografyVisible(false);
     setArtistBiografy(null);
     setIsActionActive(false);
-    setIsHovered(false); // Dodajte ovu liniju za resetiranje handleHover
+    setIsHovered(false); 
   };
 
   return (

@@ -23,6 +23,8 @@ import Vjezba1505 from "./pages/vjezba1505";
 import Todo from "./pages/todo";
 import SearchApp from "./pages/search-app";
 import Artist from "./pages/artist";
+import BootstrapExe from "./pages/bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -113,6 +115,10 @@ const App = () => {
     {
       path: "/artist",
       element: <Artist />,
+    },
+    {
+      path: "/bootstrapExe",
+      element: <BootstrapExe/>,
     },
   ]);
 
