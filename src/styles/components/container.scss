@@ -6,12 +6,25 @@
   max-width: 1350px;
   margin: 2rem auto;
   padding: 0 2rem;
-  
-  border:2px solid $hover-green;
 
-  & h2{
+  border: 2px solid $hover-green;
+
+  & h2 {
     font-size: 2.5rem;
     color: $hover-green;
     text-align: center;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__numb {
+    font-size: 3rem;
+  }
+
+  &__card {
+    width: 40%;
   }
 }
