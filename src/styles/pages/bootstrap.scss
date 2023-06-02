@@ -1,0 +1,41 @@
+@keyframes slide-down {
+  0% {
+    top: -35rem;
+  }
+  100% {
+    top: 2rem;
+  }
+}
+
+.bootstrap{
+&__alert{
+  position: fixed;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: slide-down 2s forwards;
+}
+
+&__section{
+  display: flex;
+  justify-content: space-between;
+}
+  &__cards{
+    width: 475px;
+    height:199px;
+    border-radius: 1rem;
+  }
+
+  &__boxs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  &__numb{
+    font-size: 64px;
+    margin-top: 16px;
+    margin-left: 59px;
+    margin-right: 130px;
+  }
+}
