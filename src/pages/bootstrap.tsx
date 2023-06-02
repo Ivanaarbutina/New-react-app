@@ -13,7 +13,10 @@ import {
 } from "react-bootstrap";
 import { famArt } from "../data/artData";
 import { useState } from "react";
-import {frontRazred} from "../data/frontRazred";
+import { frontRazred } from "../data/frontRazred";
+import robot from "../assets/robot-svgrepo-com 1.png";
+import cool from "../assets/cool-svgrepo-com 1.png";
+import grass from "../assets/rect15742.png";
 import { LineChart, XAxis, YAxis, CartesianGrid, Line } from "recharts";
 
 const data = [
@@ -62,16 +65,34 @@ const BootstrapExe = () => {
   const [isBiografyVisible, setIsBiografyVisible] = useState(false);
   const [artistBiografy, setArtistBiografy] = useState<ArtType | null>(null);
   const [showAlert, setShowAlert] = useState(false);
+  const [robotPosition, setRobotPosition] = useState({ x: 0, y: 0 });
 
+  const handleKeyPress = (event) => {
+    const { key } = event;
+    let newX = robotPosition.x;
+    let newY = robotPosition.y;
+
+    // Promijeni poziciju robota na temelju pritisnute tipke
+    if (key === "ArrowUp") {
+      newY -= 1;
+    } else if (key === "ArrowDown") {
+      newY += 1;
+    } else if (key === "ArrowLeft") {
+      newX -= 1;
+    } else if (key === "ArrowRight") {
+      newX += 1;
+    }
+
+    // Ažuriraj poziciju robota
+    setRobotPosition({ x: newX, y: newY });
+  };
   const handleClick = () => {
     setShowAlert(true);
   };
 
   return (
     <div>
-      <h2>Accordion</h2>
-
-      <div className="container">
+      <div className="containerbs">
         {famArt.map((artist) => {
           isBiografyVisible && artistBiografy?.id === artist.id;
           return (
@@ -96,10 +117,8 @@ const BootstrapExe = () => {
         })}
       </div>
 
-      <div className="container">
-        <div>
-
-        </div>
+      <div className="containerbs">
+        <div></div>
         <div>
           <Button onClick={handleClick}>Click me</Button>
           {showAlert && (
@@ -113,81 +132,105 @@ const BootstrapExe = () => {
             </Alert>
           )}
         </div>
-        
       </div>
-      <div className="container">
-       <div>
-          <div >
-              <TabContainer defaultActiveKey="dashboard">
-                <Tab.Content>
-                  <TabPane eventKey="dashboard" title="Dashboard">
-                    <div></div>
-                  </TabPane>
-                </Tab.Content>
-              </TabContainer>
+      <div className="containerbs">
+        <div>
+          <div>
+            <TabContainer defaultActiveKey="dashboard">
+              <Tab.Content>
+                <TabPane eventKey="dashboard" title="Dashboard">
+                  <div></div>
+                </TabPane>
+              </Tab.Content>
+            </TabContainer>
 
-              <Tabs
-                defaultActiveKey="profile"
-                id="justify-tab-example"
-                className="mb-3"
-                justify
-              >
-                <Tab eventKey="dashboard" title="Dashboard">
-                  <div className="bootstrap__section">
-                    <Card className="bootstrap__cards">
-                      <Card.Body>
-                        <div className="bootstrap__boxs" >
-                          <span className="bootstrap__numb">45</span>
-                          <div >
-                            <p>Ovo je neki text</p>
-                            <p>koji nesto objasnjava</p>
-                          </div>
+            <Tabs
+              defaultActiveKey="profile"
+              id="justify-tab-example"
+              className="mb-3"
+              justify
+            >
+              <Tab eventKey="dashboard" title="Dashboard">
+                <div className="bootstrap__section">
+                  <Card className="bootstrap__cards">
+                    <Card.Body>
+                      <div className="bootstrap__boxs">
+                        <span className="bootstrap__numb">45</span>
+                        <div>
+                          <p>Ovo je neki text</p>
+                          <p>koji nesto objasnjava</p>
                         </div>
-                        <ProgressBar striped variant="info" now={20} />
-                      </Card.Body>
-                    </Card>
-                    <Card className="bootstrap__cards">
-                      <LineChart width={393} height={180} data={data}>
-                        <XAxis dataKey="name" />
-                        <YAxis />
-                        <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-                        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-                        <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
-                      </LineChart>
-                    </Card>
+                      </div>
+                      <ProgressBar striped variant="info" now={20} />
+                    </Card.Body>
+                  </Card>
+                  <Card className="bootstrap__cards">
+                    <LineChart width={393} height={180} data={data}>
+                      <XAxis dataKey="name" />
+                      <YAxis />
+                      <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+                      <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+                      <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
+                    </LineChart>
+                  </Card>
+                </div>
+
+                <Table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>LastName</th>
+                      <th>Height</th>
+                      <th>Hobby</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {frontRazred.map((student: StudentType) => {
+                      return (
+                        <tr key={student.name}>
+                          <td>{student.name}</td>
+                          <td>{student.lastName}</td>
+                          <td>{student.height}</td>
+                          <td>{student.hobby}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </Table>
+              </Tab>
+              <Tab eventKey="game" title="Game">
+                <div>
+                  <div className="bootstrap__game1">
+                    <img className="bootstrap__robot" src={robot} />
+
+                    <button
+                      className="bootstrap__gamebtn"
+                      onClick={handleKeyPress}
+                    >
+                      Finish
+                    </button>
                   </div>
 
-                  <Table >
-                    <thead>
-                      <tr>
-                        <th>Name</th>
-                        <th>LastName</th>
-                        <th>Height</th>
-                        <th>Hobby</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {frontRazred.map((student: StudentType) => {
-                        return (
-                          <tr key={student.name}>
-                            <td>{student.name}</td>
-                            <td>{student.lastName}</td>
-                            <td>{student.height}</td>
-                            <td>{student.hobby}</td>
-                          </tr>
-                        );
-                      })} 
-                    </tbody>
-                  </Table>
-                </Tab>
-                <Tab eventKey="game" title="Game">
-                  
-                </Tab>
-              </Tabs>
-            </div>
+                  <div className="bootstrap__game2">
+                    <img src={grass} />
+                    <img src={grass} />
+                    <img src={grass} />
+                  </div>
+                </div>
+                <div className="bootstrap__vertical"></div>
+                <div>
+                  <img className="bootstrap__cool" src={cool} />
+                </div>
+                <div className="bootstrap__game2">
+                  <img src={grass} />
+                  <img src={grass} />
+                  <img src={grass} />
+                </div>
+              </Tab>
+            </Tabs>
           </div>
         </div>
-      
+      </div>
     </div>
   );
 };
