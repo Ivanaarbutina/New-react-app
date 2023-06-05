@@ -71,6 +71,7 @@
     height: 48px;
     border-style: none;
     color: $white;
+   
   }
 
   &__robot {
@@ -88,5 +89,22 @@
 
   &__cool {
     margin-top: 137px;
+  }
+
+  &__message{
+    border: 1px solid black;
+    width: 40rem;
+    height: 10rem;
+    background-color:$gray;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: $white;
+    z-index: 555;
+    text-align: center;
   }
 }
