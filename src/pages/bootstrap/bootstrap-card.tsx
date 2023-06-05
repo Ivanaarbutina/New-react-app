@@ -1,9 +1,9 @@
-import { Card, ProgressBar } from "react-bootstrap";
+//import { Card, ProgressBar } from "react-bootstrap";
 
 const BootstrapCard = () => {
   return (
     <div>
-       <Card className="bootstrap__cards">
+      {/* <Card className="bootstrap__cards">
                     <Card.Body>
                       <div className="bootstrap__boxs">
                         <span className="bootstrap__numb">45</span>
@@ -14,9 +14,9 @@ const BootstrapCard = () => {
                       </div>
                       <ProgressBar striped variant="info" animated now={20} />
                     </Card.Body>
-                  </Card>
+                  </Card> */}
     </div>
-  )
-}
+  );
+};
 
 export default BootstrapCard;

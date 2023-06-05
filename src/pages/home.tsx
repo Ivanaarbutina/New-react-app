@@ -53,6 +53,9 @@ const Home = () => {
           <li>
             <a href="/bootstrapExe">BootstrapExe</a>
           </li>
+          <li>
+            <a href="/instagram">Instagram</a>
+          </li>
         </ul>
       </div>
     </div>

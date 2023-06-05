@@ -1,4 +1,4 @@
-import { Table } from "react-bootstrap";
+//import { Table } from "react-bootstrap";
 import { frontRazred } from "../../data/frontRazred";
 
 type StudentType = {
@@ -15,7 +15,7 @@ type StudentType = {
 const BootstrapTable = () => {
   return (
     <div>
-           <Table striped bordered hover>
+      {/* <Table striped bordered hover>
              <thead>
                <tr>
                  <th>Name</th>
@@ -36,9 +36,9 @@ const BootstrapTable = () => {
                 );
              })}
            </tbody>
-         </Table>
+         </Table> */}
     </div>
-  )
-}
+  );
+};
 
 export default BootstrapTable;

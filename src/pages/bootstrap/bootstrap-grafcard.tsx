@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+//import { Card } from "react-bootstrap";
 import { LineChart, XAxis, YAxis, CartesianGrid, Line } from "recharts";
 
 const data = [
@@ -19,7 +19,7 @@ const data = [
 const BootstrapGraf = () => {
   return (
     <div>
-        <Card className="bootstrap__cards">
+      {/* <Card className="bootstrap__cards">
           <LineChart width={393} height={180} data={data}>
            <XAxis dataKey="name" />
            <YAxis />
@@ -27,9 +27,9 @@ const BootstrapGraf = () => {
            <Line type="monotone" dataKey="uv" stroke="#8884d8" />
            <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
           </LineChart>
-        </Card>
+        </Card> */}
     </div>
-  )
-}
+  );
+};
 
 export default BootstrapGraf;

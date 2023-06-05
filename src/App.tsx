@@ -24,7 +24,8 @@ import Todo from "./pages/todo";
 import SearchApp from "./pages/search-app";
 import Artist from "./pages/artist";
 import BootstrapExe from "./pages/bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Instagram from "./pages/instagram/instagram";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -118,7 +119,11 @@ const App = () => {
     },
     {
       path: "/bootstrapExe",
-      element: <BootstrapExe/>,
+      element: <BootstrapExe />,
+    },
+    {
+      path: "/instagram",
+      element: <Instagram />,
     },
   ]);
 
