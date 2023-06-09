@@ -26,16 +26,16 @@ const BootstrapAccordion = () => {
     <div>
          <div className="containerbs">
           <h2>Accordion</h2>
-              {famArt.map((artist) => {
+              {/* {famArt.map((artist) => {
                 isBiografyVisible && artistBiografy?.id === artist.id;
-                return (
-                  // <Accordion defaultActiveKey={`${artist.name}-${artist.lastName}`}>
+                return ( */}
+                  {/* // <Accordion defaultActiveKey={`${artist.name}-${artist.lastName}`}>
                   //   <Accordion.Item eventKey="0">
                   //     <Accordion.Header>{`${artist.name}-${artist.lastName}`}</Accordion.Header>
                   //     <Accordion.Body>
                   //       <div className="art__exe">
-                  //         <img
-                  //           className="art__image"
+                  //         <img */}
+                  {/* //           className="art__image"
                   //           src={artist.profilImage}
                   //           alt={`${artist.name} ${artist.lastName}`}
                   //         />
@@ -43,10 +43,10 @@ const BootstrapAccordion = () => {
                   //       </div>
 
                   //       <div>{artist.biografy}</div>
-                  //     </Accordion.Body>
-                  //   </Accordion.Item>
+                  //     </Accordion.Body> */}
+                  {/* //   </Accordion.Item>
                   // </Accordion>
-                //
+                // */}
             //
             </div>
     </div>

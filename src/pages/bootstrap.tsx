@@ -10,8 +10,8 @@ import BootstrapGame from "./bootstrap/bootstrap-game";
 const BootstrapExe = () => {
   return (
     <div>
-      <BootstrapAccordion />
-      <BootstrapButton />
+      {/* <BootstrapAccordion />
+      <BootstrapButton /> */}
       <div className="containerbs">
         <div>
           {/* <Tabs>
