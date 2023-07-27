@@ -1,36 +1,64 @@
+:root {
+  //border
+  --border-rounded: 0.5rem;
+
+  //colors
+  --color-gray-300: #afafae;
+  --color-gray-400: #4f5051;
+  --color-gray-500: #0e0d0d;
+  --color-gray-450: #566573;
+  --color-gray-460: #575e5b;
+  --color-green: #44d29b;
+  --color-green-150: rgb(127, 159, 150);
+  --color-white-300: #f4f4f4;
+  --color-white-400: #f8f8f8;
+  --color-animated-1: #cbdadb;
+  --color-animated-2: #62e4c4;
+  --color-animated-3: #0d4671;
+  --color-card-1: #a1afae;
+  --color-card-2: #7cb4b0;
+  --color-card-3: #93bbb8;
+  --color-card-4: #285678;
+  --color-box-1: #424e4c;
+  --color-carmine-1: #731054;
+  --color-carmine-2: #e411a1;
+}
+
 //base
 @import "./base/base.scss";
 @import "./base/vars.scss";
 
 //components
+@import "./pages/artist.scss";
 @import "./components/button.scss";
 @import "./components/box.scss";
 @import "./components/card.scss";
+@import "./components/chat.scss";
 @import "./components/checkbox.scss";
 @import "./components/container.scss";
+@import "./pages/europe.scss";
 @import "./components/fave.scss";
 @import "./components/flex-exe.scss";
 @import "./components/flex-2.scss";
 @import "./components/form.scss";
 @import "./components/grid-card.scss";
 @import "./components/header.scss";
+@import "./components/home.scss";
 @import "./components/home-work.scss";
+@import "./components/input.scss";
 @import "./pages/instagram.scss";
 @import "./components/ispit.scss";
 @import "./components/mlinar.scss";
 @import "./components/modal.scss";
+@import "./components/pagination.scss";
+@import "./components/search-app.scss";
+@import "./components/table.scss";
 @import "./components/tags.scss";
 @import "./components/teorem.scss";
-@import "./components/toggle.scss";
-@import "./components/pagination.scss";
-@import "./components/tags.scss";
-@import "./components/varijable.scss";
-@import "./components/input.scss";
-@import "./components/table.scss";
-@import "./components/chat.scss";
-@import "./components/home.scss";
 @import "./components/todo.scss";
-@import "./pages/artist.scss";
+@import "./components/toggle.scss";
+@import "./components/varijable.scss";
+
 //@import "./pages/bootstrap.scss";
 
 //@import "node_modules/bootstrap/scss/bootstrap";

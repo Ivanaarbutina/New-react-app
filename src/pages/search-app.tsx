@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 type SearchResult = {
-  trackId: number;
   trackName: string;
   artistName: string;
   artistViewUrl: string;
@@ -12,8 +11,9 @@ type SearchResult = {
 };
 
 const SearchApp = () => {
+  const [error, setError] = useState("");
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [searchResults, setSearchResults] = useState<SearchResult[] | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchData = (term: string) => {
@@ -34,8 +34,10 @@ const SearchApp = () => {
   return (
     <div className="container">
       <h2>Search App</h2>
-      <div>
+      <div className="song__input__wrapper">
         <input
+          className="song__input"
+          placeholder="Enter a song name"
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -48,33 +50,44 @@ const SearchApp = () => {
         >
           Search
         </button>
+        </div>
+        <div className="song__grid">
         {isLoading ? (
           <div>Loading...</div>
-        ) : searchResults.length === 0 ? (
-          <div>Nema trazenog rezultata</div>
-        ) : (
-            searchResults.map((result, index) => (
-              <div key={index}>
-               <img className=""
-               src={result.artworkUrl100}
-               alt={`${result.artistName} - ${result.trackName}`}
+        ) : searchResults ? (
+            searchResults.map((result, index) => {
+              return(
+              <div key={index} className="song__card">
+               <img 
+                  className="song__card__img"
+                  src={result.artworkUrl100}
+                  alt={`${result.artistName} - ${result.trackName}`}
                />
-               <div>
+               <div className="song__card__body">
                 <a 
-                href={result.artistViewUrl}
-                target={"_blank"}
+                  href={result.artistViewUrl}
+                  target={"_blank"}
+                  className="song__card__name"
                 >
                   {result.artistName} - {result.trackName}
                 </a>
-                <div>{result.primaryGenreName}</div>
+                <div className="song__card__genere">
+                  {result.primaryGenreName}
+                </div>
                </div>
                <audio controls>
                 <source src={result.previewUrl} type="audio/mpeg"/>
                 Your browser does not support the audio element.
                </audio>
               </div>
-            )))}
-      </div>
+            ); 
+          })
+        ):( 
+        <div>{error ? error : "Nema pronađenih rezultata"}</div>
+        )}
+        </div>
+    
+      
     </div>
   );
 };

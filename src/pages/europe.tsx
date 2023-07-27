@@ -1,136 +1,117 @@
-import { useEffect, useState } from "react";
-import People from "./../assets/people.svg";
-import LeftRide from "./../assets/left-side.svg";
-import RightRide from "./../assets/right-side.svg";
-
-type EuropeType = {
-  name: CountryType;
-  flags: FlagsType;
-  capital: string[];
-  currencies: CurrencyType;
-  population: number;
-  borders: string[];
-  maps: MapsType;
-  car: CarType;
-};
-
-type CarType = {
-  signs: string[];
-  side: string;
-};
-
-type MapsType = {
-  googleMaps: string;
-  openStreetMaps: string;
-};
-
-type CurrencyType = {
-  [currency: string]: {
-    name: string;
-    symbol: string;
-  };
-};
-
-type FlagsType = {
-  png: string;
-  svg: string;
-};
-
-type CountryType = {
-  common: string;
-};
+import React, { useEffect, useState } from "react";
+import { EuropeType } from "./../data/europe";
+import { Link } from "react-router-dom";
+import Left from "./../assets/left-side.svg";
+import Right from "./../assets/right-side.svg";
+import Button from "../components/button";
 
 const Europe = () => {
   const [data, setData] = useState<EuropeType[]>([]);
+  const [query, setQuery] = useState("");
 
   const getEurope = () => {
-    fetch(`https://restcountries.com/v3.1/region/europe`)
-      .then((response) => {
-        return response.json();
-      })
-      .then((jsonData) => {
-        console.log(jsonData);
-        setData(jsonData);
-      })
-      .catch((error) => console.error(error));
+    let url = "https://restcountries.com/v3.1/region/europe";
+    if (query) {
+      url += `?name=${query}`;
+    }
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      });
   };
 
   useEffect(() => {
     getEurope();
-  }, []);
+  }, [query]);
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    getEurope();
+  };
+
+  const filteredData = data.filter((country) => {
+    const name = country.name.common.toLowerCase();
+    return name.includes(query.toLowerCase());
+  });
   return (
     <div className="container">
       <h2>Europe</h2>
-      <div>
-        <table className="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Flag</th>
-              <th>Currency</th>
-              <th>Map</th>
-              <th>Capital City</th>
-              <th>Population</th>
-              <th>Borders</th>
-              <th>Cars</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((country) => {
-              console.log(country.borders);
-              return (
-                <tr>
-                  <td>{country.name.common}</td>
-                  <td>
-                    <img className="table__img2" src={country.flags.png} />
-                  </td>
-                  <td>
-                    {Object.keys(country.currencies).map((currency) => {
-                      return currency;
-                    })}
-                  </td>
-                  <td >
-                    <a  className="table__link" href={country.maps.googleMaps} target="_blank">
-                      Map
-                    </a>
-                  </td>
-                  <td >
-                    {country.capital.map((capital) => {
-                      return capital;
-                    })}
-                  </td>
-                  <td className="table__td">
-                    <img className="table__img" src={People} alt="" />
-                    {country.population.toLocaleString("en-US")}
-                  </td>
-                  <td>
-                    {country.borders
-                      ? country.borders.map((borders) => {
-                          return borders + " ";
-                        })
-                      : "nema granica"}
-                  </td>
-                  <td>
-                    {country.car.signs.map((sign) => {
-                      return sign + " ";
-                    })}
-                    <span>
+      <div className="europe">
+        <form onSubmit={handleSubmit} className="europe__form">
+          <input
+            type="text"
+            placeholder="Search country"
+            value={query}
+            onChange={handleChange}
+            className="europe__input"
+          />
+          <button type="submit"> Search </button>
+        </form>
+        <div className="europe__table__wrapper">
+          <table className="europe__table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Flag</th>
+                <th>Capital City</th>
+                <th>Map</th>
+                <th>Population</th>
+                <th>Borders</th>
+                <th>Car</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredData.map((country, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{country.name.common}</td>
+                    <td>
+                      <img src={country.flags.png} className="europe__img" />
+                    </td>
+                    <td>
+                      {country.capital
+                        ? country.capital.map((capital) => {
+                            return capital;
+                          })
+                        : "undefined"}
+                    </td>
+
+                    <td>
+                      <Link to={country.maps.googleMaps} target="_blank">
+                        {" "}
+                        Map
+                      </Link>
+                    </td>
+                    <td>{country.population.toLocaleString("en-US")}</td>
+                    <td>
+                      {country.borders
+                        ? country.borders.map((borders) => {
+                            return borders + " ";
+                          })
+                        : "no borders"}
+                    </td>
+                    <td>
                       {country.car.side === "left" ? (
-                        <img src={LeftRide} />
+                        <img src={Left} />
                       ) : (
-                        <img src={RightRide} />
+                        <img src={Right} />
                       )}
-                    </span>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-      <div>
-      
+                      {country.car.signs.map((signs) => {
+                        return signs + " ";
+                      })}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );
